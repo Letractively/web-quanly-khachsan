@@ -1,0 +1,19 @@
+/* 
+    Document   : midpagestyle
+    Created on : Dec 5, 2013, 3:58:48 PM
+    Author     : Maxsys
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+#midpage-slideimage{
+    width: 100%;
+    height: 200px;
+    margin: 20px 0 0 0;
+    padding: 0;
+    border: solid 1px cornsilk;
+}
+
