@@ -1,0 +1,36 @@
+/* 
+    Document   : toppagestyle
+    Created on : Dec 5, 2013, 3:46:43 PM
+    Author     : Maxsys
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+#Logotoppage{
+    width: 40%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background: #ccffff no-repeat;
+}
+#Languagetoppage{
+    width: 60%;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background: activecaption no-repeat;
+}
+#Menutoppage{
+    width: 60%;
+    height: 170px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background: #cd0a0a no-repeat;
+}
+
