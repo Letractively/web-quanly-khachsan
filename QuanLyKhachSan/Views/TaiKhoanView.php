@@ -1,7 +1,7 @@
 <?php
 
 
-class AccountView {
+class TaiKhoanView {
     
      public function showList($accounts){
          

@@ -11,7 +11,7 @@ include('AccountView.php');
  *
  * @author Maxsys
  */
-class AccountController {
+class TaiKhoanController {
     
     public $repo;
     public $view;
