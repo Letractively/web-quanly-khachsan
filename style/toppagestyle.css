@@ -15,7 +15,7 @@ root {
     margin: 0;
     padding: 0;
     float: left;
-    background: #ccffff no-repeat;
+    background: url('../image/logo.png') no-repeat;
 }
 #Languagetoppage{
     width: 60%;
@@ -23,14 +23,63 @@ root {
     margin: 0;
     padding: 0;
     float: left;
-    background: activecaption no-repeat;
 }
 #Menutoppage{
-    width: 60%;
-    height: 170px;
+    width: 570px;
+    height: 120px;
     margin: 0;
     padding: 0;
     float: left;
-    background: #cd0a0a no-repeat;
+}
+#language-en{
+    width: 30px;
+    height: 30px;
+    float: right;
+    background: url('../icons/en.png') no-repeat;
+    margin: 0 5px 0 0;
+}
+#language-vi{
+    margin: 0 5px 0 0;
+    width: 30px;
+    height: 30px;
+    float: right;
+    background: url('../icons/vi.png') no-repeat;
 }
 
+#Menutoppage ul,li{
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial;
+}
+#Menutop-list-ul{
+    height: 120px;
+    width: 570px;
+    margin: 0;
+    padding: 0;
+}
+.Menutop-list-li{
+    height: 96px;
+    width: 79px;
+    margin: 0 0 0 2px;
+    padding: 45px 0 0 0;
+    line-height: 25px;
+    display:inline-block;
+    vertical-align: middle;
+    float: left;
+    background: gray;
+    font-size: 17px;
+    font-weight: bold;
+    background:-webkit-radial-gradient(top center, gray, black);
+    cursor: default;
+    border-top-left-radius:40px;
+    border-top-right-radius:40px;
+}
+.Menutop-list-li:hover{
+    color: yellow;
+    border-bottom: #ffffff solid 2px;
+    background:-webkit-radial-gradient(bottom center, gray, black);
+    /*width: 75px;
+    height: 92px;*/
+}
