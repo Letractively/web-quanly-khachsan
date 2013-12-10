@@ -10,28 +10,36 @@ root {
     display: block;
 }
 body{
-    background: #000000;
-    background: url('../image/bg_overlay.png') no-repeat #000000 center;
+    background: #000;
+    background: url('../image/bg_overlay.png') no-repeat #000 center;
 }
 #container{
     margin: auto;
     padding: 0;
     width: 950px;
     height: auto;
-    border: solid 1px crimson;
+    color: white;
+    font-family: arial;
 }
 #toppage{
     margin: auto;
     padding: 0;
     width: 100%;
-    height: 200px;
-    border: solid 1px #ffffff;
+    height: 150px;
 }
 #midpage{
     margin: auto;
-    padding: 0;
+    padding: 10px 0 0 0;
     width: 100%;
     height: auto;
-    border: solid 1px #ffffff;
+}
+#botpage{
+   margin: 20px 0 0 0;
+    padding: 0;
+    width: 950px;
+    height: auto;
+    float: left;
+    clear: both;
+    text-align: center;
 }
 
