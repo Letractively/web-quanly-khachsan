@@ -5,17 +5,14 @@ class TaiKhoan {
     var $idTaiKhoan;
     var $TenTK;
     var $MatKhau;
-    var $PhanQuyen_idPhanQuyen;
-    var $PhanQuyen_idTaiKhoan;
+    var $Quyen;
     
-    function __construct($idTaiKhoan, $TenTK, $MatKhau, $PhanQuyen_idPhanQuyen, $PhanQuyen_idTaiKhoan) {
+    function __construct($idTaiKhoan, $TenTK, $MatKhau, $Quyen) {
         $this->idTaiKhoan = $idTaiKhoan;
         $this->TenTK = $TenTK;
         $this->MatKhau = $MatKhau;
-        $this->PhanQuyen_idPhanQuyen = $PhanQuyen_idPhanQuyen;
-        $this->PhanQuyen_idTaiKhoan = $PhanQuyen_idTaiKhoan;
+        $this->Quyen = $Quyen;
     }
-    
     public function getIdTaiKhoan() {
         return $this->idTaiKhoan;
     }
@@ -28,12 +25,8 @@ class TaiKhoan {
         return $this->MatKhau;
     }
 
-    public function getPhanQuyen_idPhanQuyen() {
-        return $this->PhanQuyen_idPhanQuyen;
-    }
-
-    public function getPhanQuyen_idTaiKhoan() {
-        return $this->PhanQuyen_idTaiKhoan;
+    public function getQuyen() {
+        return $this->Quyen;
     }
 
     public function setIdTaiKhoan($idTaiKhoan) {
@@ -48,12 +41,8 @@ class TaiKhoan {
         $this->MatKhau = $MatKhau;
     }
 
-    public function setPhanQuyen_idPhanQuyen($PhanQuyen_idPhanQuyen) {
-        $this->PhanQuyen_idPhanQuyen = $PhanQuyen_idPhanQuyen;
-    }
-
-    public function setPhanQuyen_idTaiKhoan($PhanQuyen_idTaiKhoan) {
-        $this->PhanQuyen_idTaiKhoan = $PhanQuyen_idTaiKhoan;
+    public function setQuyen($Quyen) {
+        $this->Quyen = $Quyen;
     }
 
 
