@@ -19,6 +19,11 @@ root {
     
     
 }
+#bigPic img{
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
 #midpage-slideimage-big{
     width: 900px;
     height: 250px;
@@ -35,11 +40,17 @@ root {
     width: 100%;
     height: 100px;
     margin: auto;
-    padding: 0 0 0 7px;
+    padding: 0 0 0 2px;
     position: absolute;
     top: 200px;
+    z-index: 3;
     
     
+}
+#midpage-slideimage-thumb img{
+    border: solid 1px white;
+    border-radius: 3px;
+    opacity: 0.9;
 }
 #midpage-post{
     height: auto;
@@ -96,7 +107,7 @@ root {
 }
 #midpage-post-left-events ul,li{
     list-style-type: georgian;
-    /*text-align: left;*/
+    text-align: left;
     
 }
 #midpage-post-left-events a{
