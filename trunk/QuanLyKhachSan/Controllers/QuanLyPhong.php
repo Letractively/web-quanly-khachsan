@@ -1,17 +1,40 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of QuanLyPhong
- *
- * @author Admin
- */
+include '../Datalayers/PhongSQL.php';
 class QuanLyPhong {
-    //put your code here
-}
+    
+    //Tìm Kiếm
+    function  TimKiemTheoID(){
+        
+        
+    }
+    function  TimKiemTheoTenPhong(){
+        
+    }
+    function TimKiemTinhTrang(){
+        
+    }
+    function TimKiemTheoGia(){
+        
+    }
+    
+    //Xắp Xếp
+    function XapXepPhong(){
+        
+    }
+    //Tiện Ích
+    function ThemPhong(){
+        
+    }
+    function XoaPhong(){
+        
+    }
+    function Update(){
+        
+    }
+    
+    
 
+}
 ?>
+
