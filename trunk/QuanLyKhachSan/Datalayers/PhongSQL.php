@@ -1,17 +1,31 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of PhongSQL
- *
- * @author Admin
- */
 class PhongSQL {
-    //put your code here
+
+    function  KetNoi(){
+        
+        $db = mysql_connect("localhost", "root","");
+        if (!$db) {
+            echo  "Không Thể Kết nối CSDL";
+            exit();
+            return FALSE;
+        }
+        return true;
+    }
+    //Lấy Thông Tin
+    function LayID(){
+      $ketquaid = mysql_query("select * frome")  
+        
+    }
+    function LayTenPhong(){
+        
+    }
+    function LayTinhTrang(){
+        
+    }
+    
+  
 }
 
 ?>
+
