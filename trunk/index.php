@@ -18,6 +18,9 @@ require_once './include/functions.php';
         <link type="text/css" href="style/botpagestyle.css" rel="stylesheet">
         <link type="text/css" href="style/staticpanel.css" rel="stylesheet">
         <link type="text/css" href="style/loginstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/slideimagestyle.css" rel="stylesheet">
+        <link type="text/css" href="style/midleftstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/homestyle.css" rel="stylesheet">
         <script type="text/javascript" lang="javascript" src="script/jquery.js"></script>
     <script type="text/javascript" lang="javascript" src="script/jquery-ui.js"></script>
     <script type="text/javascript" lang="javascript" src="script/jquery.cycle.all.js"></script>

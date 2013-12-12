@@ -18,11 +18,24 @@ root {
     background: url('../image/logo.png') no-repeat;
 }
 #Languagetoppage{
-    width: 60%;
+    width: 350px;
     height: 30px;
     margin: 0;
     padding: 0;
-    float: left;
+    float: right;
+    background: url('../image/bg_footer.jpg') no-repeat;
+    border-bottom: dotted 1px gold;
+    
+}
+#Languagetoppage a{
+    text-decoration: none;
+    color: gold;
+    line-height: 10px;
+    vertical-align: middle;
+}
+#Languagetoppage span{
+    line-height: 10px;
+    vertical-align: middle;
 }
 #Menutoppage{
     width: 570px;
@@ -31,20 +44,36 @@ root {
     padding: 0;
     float: left;
 }
+#Menutoppage a{
+    color: white;
+    text-decoration: none;
+}
 #language-en{
+    padding: 0;
     width: 30px;
     height: 30px;
     float: right;
     background: url('../icons/en.png') no-repeat;
     margin: 0 5px 0 0;
+    cursor: pointer;
 }
+/*#language-en:hover{
+    border:dotted 1px gold;
+    border-radius: 2px;
+}*/
 #language-vi{
     margin: 0 5px 0 0;
+    padding: 0;
     width: 30px;
     height: 30px;
     float: right;
     background: url('../icons/vi.png') no-repeat;
+    cursor: pointer;
 }
+/*#language-vi:hover{
+    border:dotted 1px gold;
+    border-radius: 2px;
+}*/
 
 #Menutoppage ul,li{
     display: inline;
@@ -60,10 +89,10 @@ root {
     padding: 0;
 }
 .Menutop-list-li{
-    height: 50px;
+    height: 40px;
     width: 79px;
     margin: 40px 0 0 2px;
-    padding: 5px 0 0 0;
+    padding: 10px 0 0 0;
     line-height: 25px;
     display:inline-block;
     vertical-align: middle;
@@ -71,7 +100,7 @@ root {
     background: gray;
     font-size: 10px;
     font-weight: bold;
-    background:-webkit-radial-gradient(top center, white, black);
+    background:-webkit-radial-gradient(top center, gold, black);
     cursor: default;
     text-align: center;
     opacity: 0.7;
@@ -83,12 +112,12 @@ root {
     color: yellow;
     border-bottom: #ffffff solid 2px;
     border-top: #ffffff solid 2px;
-    background:-webkit-radial-gradient(bottom center, white, black);
+    background:-webkit-radial-gradient(bottom center, gold, black);
     opacity: 1;
-    height: 60px;
+    height: 36px;
     /*width: 75px;
     height: 92px;*/
-    padding: 20px 0 0 0;
+    /*padding: 20px 0 0 0;*/
     font-size: 10px;
     font-weight: bold;
 }

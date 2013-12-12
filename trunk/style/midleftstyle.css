@@ -1,0 +1,56 @@
+/* 
+    Document   : midleftstyle
+    Created on : Dec 12, 2013, 4:20:41 PM
+    Author     : Maxsys
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#midpage-post-left{
+    height: auto;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: block;
+    
+}
+#midpage-post-left-calendar{
+    height: 220px;
+    width: 100%;
+    
+}
+#midpage-post-left-events{
+    height: auto;
+    width: 100%;
+    
+}
+#midpage-post-left-contact{
+    font: 12px;
+    height: 100px;
+    width: 100%;
+    clear: both;
+    
+}
+.mid-left{
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+.mid-left-line{
+    margin-left: 2px;
+}
+#midpage-post-left-events ul,li{
+    list-style-type: georgian;
+    text-align: left;
+    
+}
+#midpage-post-left-events a{
+    text-decoration: none;
+    border-bottom: dotted 2px #fcefa1;
+    color: #fff;
+    text-align: left;
+}
