@@ -194,7 +194,7 @@ table {
 }
 
 .login-bar{
-    border-top:4px solid #222;
+    /*border-top:4px solid #222;*/
     position:relative;
 }
 
@@ -203,11 +203,19 @@ table {
     position:absolute;
     right:0%;
     background-color:#222;
-    color:#fff;
+    color:gold;
     font-weight:bold;
-    padding:6px 15px 8px 15px;
-    border-radius:0 0 3px 3px;
+    padding:8px 15px 8px 15px;
+    border-radius:3px;
 	text-transform:uppercase;
 	letter-spacing:1px;
         text-decoration: none;
+        font-family: arial;
+        font-size: 14px;
+        opacity: 0.6;
+}
+.login-button:hover{
+    opacity: 1;
+    border: dotted 2px gold;
+    padding:6px 13px 6px 13px;
 }

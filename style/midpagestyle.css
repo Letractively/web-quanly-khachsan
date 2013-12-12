@@ -9,85 +9,18 @@
 root { 
     display: block;
 }
-#midpage-slideimage{
-    width: 100%;
-    height: 300px;
-    margin: 20px 0 0 0;
-    padding: 0;
-    display: block;
-    position: relative;
-    
-    
-}
-#bigPic img{
-    position: absolute;
-    display: none;
-    z-index: 1;
-}
-#midpage-slideimage-big{
-    width: 900px;
-    height: 250px;
-    margin: 0 0 0 25px;
-    vertical-align: central;
-    text-align: center;
-    padding: 0;
-    position: absolute;
-    border: solid 4px #fff;
-    border-radius: 4px;
-    
-}
-#midpage-slideimage-thumb{
-    width: 100%;
-    height: 100px;
-    margin: auto;
-    padding: 0 0 0 2px;
-    position: absolute;
-    top: 200px;
-    z-index: 3;
-    
-    
-}
-#midpage-slideimage-thumb img{
-    border: solid 1px white;
-    border-radius: 3px;
-    opacity: 0.9;
-}
 #midpage-post{
     height: auto;
     width: 100%;
     margin: 10px 0 0 0;
     
 }
-#midpage-post-left{
-    height: auto;
-    width: 300px;
-    margin: 0;
-    padding: 0;
-    float: left;
-    display: block;
-    
-}
-#midpage-post-left-calendar{
-    height: 220px;
-    width: 100%;
-    
-}
-#midpage-post-left-events{
-    height: 250px;
-    width: 100%;
-    
-}
-#midpage-post-left-contact{
-    height: 100px;
-    width: 100%;
-    clear: both;
-    
-}
-#midpage-post-right{
+
+#midpage-post-main{
     height: auto;
     width: 635px;
-    margin: 0;
-    padding: 0;
+    margin: 5px 0 0 0;
+    padding: 5px;
     float: right;
     display: block;
     
@@ -98,21 +31,4 @@ root {
     margin: auto;
     
 }
-.mid-left{
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
-}
-.mid-left-line{
-    margin-left: 2px;
-}
-#midpage-post-left-events ul,li{
-    list-style-type: georgian;
-    text-align: left;
-    
-}
-#midpage-post-left-events a{
-    text-decoration: none;
-    border-bottom: dotted 2px #fcefa1;
-    color: #fff;
-    text-align: left;
-}
+

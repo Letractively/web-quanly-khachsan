@@ -378,7 +378,7 @@ function getGioHoangDao(jd) {
 	return ret;
 }
 
-var DAYNAMES = new Array("CN", "T2", "T3", "T4", "T5", "T6", "T7");
+var DAYNAMES = new Array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
 var PRINT_OPTS = new OutputOptions();
 var FONT_SIZES = new Array("9pt", "13pt", "17pt");
 var TAB_WIDTHS = new Array("180px", "420px", "600px");
@@ -445,7 +445,7 @@ function printStyle() {
 	//res += '  body {margin:0}\n';
 	res += '  .tennam {text-align:center; font-size:150%; line-height:120%; font-weight:bold; color:#000000; background-color: #CCCCCC}\n';
 	res += '  .thang {font-size: '+fontSize+'; padding:1; line-height:100%; font-family:Tahoma,Verdana,Arial; table-layout:fixed}\n';
-	res += '  .tenthang {text-align:center; font-size:125%; line-height:100%; font-weight:bold; color:#330033; background-color: #CCFFCC}\n';
+	res += '  .tenthang {text-align:center; font-size:125%; line-height:100%; font-weight:bold; color:black; background-color: #CCFFCC}\n';
 	res += '  .navi-l {text-align:center; font-size:75%; line-height:100%; font-family:Verdana,Times New Roman,Arial; font-weight:bold; color:red; background-color: #CCFFCC}\n';
 	res += '  .navi-r {text-align:center; font-size:75%; line-height:100%; font-family:Verdana,Arial,Times New Roman; font-weight:bold; color:#330033; background-color: #CCFFCC}\n';
 	res += '  .ngaytuan {width:14%; text-align:center; font-size:125%; line-height:100%; color:#330033; background-color: #FFFFCC}\n';
@@ -471,7 +471,8 @@ function printTable(mm, yy) {
 	var MonthHead = mm + "/" + yy;
 	var LunarHead = getYearCanChi(ld1.year);
 	var res = "";
-	res += ('<table class="thang" border="2" cellpadding="1" cellspacing="1" width="'+PRINT_OPTS.tableWidth+'">\n');
+//	res += ('<table class="thang" border="2" cellpadding="1" cellspacing="1" width="'+PRINT_OPTS.tableWidth+'">\n');
+res += ('<table class="thang"  border="2" cellpadding="1" cellspacing="1" width="265px" height="215px" cursor="pointer">\n');
 	res += printHead(mm, yy);
 	for (i = 0; i < 6; i++) {
 		res += ("<tr>\n");
