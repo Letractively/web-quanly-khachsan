@@ -50,6 +50,7 @@ root {
     border: solid 1px gold;
     border-radius: 3px;
     opacity: 1;
+    cursor: pointer;
 }
 #midpage-slideimage-thumb img:hover{
     border:solid 3px gold;

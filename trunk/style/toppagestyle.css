@@ -101,7 +101,7 @@ root {
     font-size: 10px;
     font-weight: bold;
     background:-webkit-radial-gradient(top center, gold, black);
-    cursor: default;
+    cursor: pointer;
     text-align: center;
     opacity: 0.7;
     /*border-top-left-radius:40px;

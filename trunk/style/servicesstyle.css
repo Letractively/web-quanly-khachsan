@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 13, 2013, 8:03:25 PM
+    Author     : Maxsys
+*/
+
+#services{
+    height: auto;
+    width: 100%;
+}
+#services-label{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    color: goldenrod;
+}
+#services li img{
+    height: 111px;
+    width: 193px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+#services ul{
+    margin: 0 0 0 0px;
+    padding: 0;
+    
+}
+#services ul li{
+    float: left;
+    /*margin-right: 14px;*/
+    margin: 11px 0 0 10px;
+}
+.services-serviceimg{
+    height: auto;
+    width: 193px;
+    border: solid 1px goldenrod;
+    border-radius: 6px;
+    padding: 1px 1px 0 1px;
+}
+.services-servicename{
+    text-align: center;
+    background: goldenrod;
+    margin: -4px -2px -1px -2px;
+    padding: 5px 0 3px 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 20px;
+    vertical-align: middle;
+}
+#services a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#services h2{
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    color: gold;
+}
+.services-labelline{
+    height: 10px;
+    width: 640px;
+    margin: auto;
+    padding: 0;
+    clear: both;
+}

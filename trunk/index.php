@@ -21,7 +21,19 @@ require_once './include/functions.php';
         <link type="text/css" href="style/slideimagestyle.css" rel="stylesheet">
         <link type="text/css" href="style/midleftstyle.css" rel="stylesheet">
         <link type="text/css" href="style/homestyle.css" rel="stylesheet">
-        <script type="text/javascript" lang="javascript" src="script/jquery.js"></script>
+        <link type="text/css" href="style/staffprofilestyle.css" rel="stylesheet">
+        <link type="text/css" href="style/spendingformstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/servicesstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/roomkindsstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/payformstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/newsstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/imagestyle.css" rel="stylesheet">
+        <link type="text/css" href="style/feedbackstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/contactstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/bookingformstyle.css" rel="stylesheet">
+        
+        
+    <script type="text/javascript" lang="javascript" src="script/jquery.js"></script>
     <script type="text/javascript" lang="javascript" src="script/jquery-ui.js"></script>
     <script type="text/javascript" lang="javascript" src="script/jquery.cycle.all.js"></script>
     <script type="text/javascript" lang="javascript" src="script/tooltip.js"></script>
