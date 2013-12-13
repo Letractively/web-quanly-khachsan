@@ -4,8 +4,8 @@ echo '';
 <div class="staticpanel">
     <div id="staticpanel-top" class="staticpanel-line"></div>
     <a href="index.php">
-        <div title="Trang Chủ" id="staticpanel-login" class="staticpanel-button" onclick=""><!--Trang chu-->
-            <img src="icons/loginico.png" alt="Trang Chủ" class="staticpanel-img">         
+        <div title="Thông Tin Cá Nhân" id="staticpanel-login" class="staticpanel-button" onclick=""><!--Trang chu-->
+            <img src="icons/loginico.png" alt="Thông Tin Cá Nhân" class="staticpanel-img">         
         </div>
     </a>
     <a href="index.php?act=thuephong">
