@@ -7,4 +7,46 @@ and open the template in the editor.
     Created on : Dec 13, 2013, 8:04:04 PM
     Author     : Maxsys
 */
-
+#imagespage{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+h2{
+    text-transform: uppercase;
+    color: gold;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 0 10px 0;
+}
+#imagespage ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+#imagespage ul li{
+    list-style-type: none;
+    display: block;
+    width: 610px;
+    height: auto;
+    border: solid 1px gold;
+    border-radius: 6px;
+    padding: 1px;
+    margin: 0 0 0 -2px;
+    
+}
+#imagespage ul li img{
+    width: 610px;
+    height: 200px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+.line-image{
+    width: 610px;
+    height: 10px;
+}

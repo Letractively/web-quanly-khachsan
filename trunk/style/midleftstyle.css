@@ -43,14 +43,19 @@ root {
 .mid-left-line{
     margin-left: 2px;
 }
-#midpage-post-left-events ul,li{
+#midpage-post-left-events ul li{
     list-style-type: georgian;
     text-align: left;
+    border-bottom: dotted 2px gold;
+    display: block;
+    margin: 0 0 5px -35px;
+   
     
 }
 #midpage-post-left-events a{
     text-decoration: none;
-    border-bottom: dotted 2px #fcefa1;
+     width: 400px;
+    height: 15px;
     color: #fff;
     text-align: left;
 }
