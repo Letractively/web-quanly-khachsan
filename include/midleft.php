@@ -24,22 +24,22 @@ document.writeln(printSelectedMonth());
         <div id="midpage-post-left-events">
             <ul id="event-list">
                 <li>
-                    <p><a href="#"> Event 1</a></p>
+                    <a href="#"> Event 1</a>
                 </li>
                 <li>
-                    <p><a href="#"> Event 1</a></p>
+                    <a href="#"> Event 1</a>
                 </li>
                 <li>
-                    <p><a href="#"> Event 1</a></p>
+                    <a href="#"> Event 1</a>
                 </li>
                 <li>
-                    <p><a href="#"> Event 1</a></p>
+                    <a href="#"> Event 1</a>
                 </li>
                 <li>
-                    <p><a href="#"> Event 1</a></p>
+                   <a href="#"> Event 1</a>
                 </li>
                 <li>
-                    <p><a href="#"> Event 1</a></p>
+                    <a href="#"> Event 1</a>
                 </li>
             </ul>
         </div>

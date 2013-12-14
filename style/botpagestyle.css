@@ -13,15 +13,20 @@ root {
     height: auto;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 5px 0 10px 0;
     display: block;
     font-size: 12px;
     line-height: 15px;
     background: url('../image/bg_footer.jpg') no-repeat;
 }
 #footer-line{
+    margin: 0;
     height: 30px;
     width: 100%;
     background: url('../image/footer.png') no-repeat;
+}
+#botpage-info h3,p{
+    margin: 0;
+    padding: 0;
 }
 

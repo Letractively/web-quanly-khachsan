@@ -17,12 +17,13 @@ root {
 }
 
 #midpage-post-main{
-    height: auto;
+    height: 800px;
     width: 635px;
     margin: 5px 0 0 0;
     padding: 5px;
     float: right;
     display: block;
+    overflow: auto;
     
 }
 #midpage-slideimage-thumb ul,li{

@@ -27,7 +27,7 @@
             <a href="index.php?act=news"><div class="Menutop-list-li">TIN TỨC</div></a>
         </li>
         <li>
-            <a href="index.php?act=feedback"><div class="Menutop-list-li">Ý KIẾN</div></a>
+            <a href="index.php?act=feedback"><div class="Menutop-list-li">PHẢN HỒI</div></a>
         </li>
         <li>
             <a href="index.php?act=contact"><div class="Menutop-list-li">LIÊN HỆ</div></a>

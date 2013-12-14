@@ -7,4 +7,33 @@ and open the template in the editor.
     Created on : Dec 13, 2013, 8:03:45 PM
     Author     : Maxsys
 */
-
+#newspage{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 610px;
+}
+#newspage h2{
+    color: gold;
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+#newspage ul li{
+    list-style-type: georgian;
+    display: block;
+    border-bottom:dotted 2px gold;
+    height: 20px;
+    width: 580px;
+    margin: 0 0 10px -25px;
+    padding: 0 0;
+    text-align: left;
+}
+#newspage a{
+    text-decoration: none;
+    color: white;
+}
+.linenews{
+    height: 10px;
+    width: 610px;
+}

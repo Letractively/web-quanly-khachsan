@@ -16,7 +16,7 @@ $act = "";
 ?>
 </div>
 <div>
-    <img src="image/banner_border_bottom.gif">
+    <img style="margin-top: 3px;" src="image/banner_border_bottom.gif">
 </div>
 <div id="midpage-post">
     <?php
