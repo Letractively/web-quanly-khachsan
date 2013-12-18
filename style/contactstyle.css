@@ -8,3 +8,39 @@ and open the template in the editor.
     Author     : Maxsys
 */
 
+#contactpage{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 610px;
+}
+.contactpage-info{
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 110px;
+    vertical-align: middle;
+    height: 70px;
+    width: 350px;
+    border: solid 2px gold;
+    border-radius: 6px;
+    display: block;
+    background: url('../image/bg_line.jpg');
+}
+.contactpage-info-image{
+    height: 70px;
+    width:70px;
+    border-radius: 4px;
+    float: left;
+}
+.contactpage-info-image img{
+    height: 70px;
+    width: 70px;
+}
+.contactpage-info-detail{
+    vertical-align: middle;
+    margin: 0;
+    padding-left: 15px;
+    float: left;
+    color: white;
+    opacity: 0.8;
+}
