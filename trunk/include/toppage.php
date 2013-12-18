@@ -4,7 +4,7 @@
 <div id="Logotoppage">
 </div>
 <div id="Languagetoppage">
-    <span><a href="#">XuanHongHotel.com.vn</a></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+    <span><a href="http://localhost:8080/QLKS/index.php">XuanHongHotel.com.vn</a></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
     <span>Ngôn ngữ</span>
     <a href="#"><div id="language-en"></div></a>
     <a href="#"><div id="language-vi"></div></a>
