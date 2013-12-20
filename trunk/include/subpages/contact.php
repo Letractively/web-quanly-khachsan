@@ -8,10 +8,10 @@
 ?>
 <div id="contactpage">
     <h2><b>< thông tin liên hệ ></b></h2>
-    <img class="line-image" src="image/banner_border_bottom.gif" alt="line"></br></br>
+    <img class="line-image" src="pageimages/image/banner_border_bottom.gif" alt="line"></br></br>
     <div class="contactpage-info">
         <div class="contactpage-info-image">
-            <img src="icons/phone.png" alt="contact">
+            <img src="pageimages/icons/phone.png" alt="contact">
         </div>
         <div class="contactpage-info-detail">
             <p><b>Nhân viên :</b> Đinh Trí Dũng</p>
@@ -21,7 +21,7 @@
     </div>
     <div class="contactpage-info">
         <div class="contactpage-info-image">
-            <img src="icons/phone.png" alt="contact">
+            <img src="pageimages/icons/phone.png" alt="contact">
         </div>
         <div class="contactpage-info-detail">
             <p><b>Nhân viên :</b> Nguyễn Nam Phú</p>
@@ -31,7 +31,7 @@
     </div>
     <div class="contactpage-info">
         <div class="contactpage-info-image">
-            <img src="icons/phone.png" alt="contact">
+            <img src="pageimages/icons/phone.png" alt="contact">
         </div>
         <div class="contactpage-info-detail">
             <p><b>Nhân viên :</b> Đặng Nguyễn Nguyên Vũ</p>
@@ -41,7 +41,7 @@
     </div>
     <div class="contactpage-info">
         <div class="contactpage-info-image">
-            <img src="icons/phone.png" alt="contact">
+            <img src="pageimages/icons/phone.png" alt="contact">
         </div>
         <div class="contactpage-info-detail">
             <p><b>Nhân viên :</b> Đỗ Ngọc Dân</p>
