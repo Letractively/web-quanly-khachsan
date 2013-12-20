@@ -8,25 +8,25 @@
 
     <div id="midpage-slideimage-big">
         <div id="bigPic">
-            <img src="hotelimg/1.png" alt="" />
-            <img src="hotelimg/2.png" alt="" />
-            <img src="hotelimg/3.png" alt="" />
-            <img src="hotelimg/4.png" alt="" />
-            <img src="hotelimg/5.png" alt="" />
-            <img src="hotelimg/6.png" alt="" />
-            <img src="hotelimg/7.png" alt="" />
+            <img src="pageimages/hotelimg/1.png" alt="" />
+            <img src="pageimages/hotelimg/2.png" alt="" />
+            <img src="pageimages/hotelimg/3.png" alt="" />
+            <img src="pageimages/hotelimg/4.png" alt="" />
+            <img src="pageimages/hotelimg/5.png" alt="" />
+            <img src="pageimages/hotelimg/6.png" alt="" />
+            <img src="pageimages/hotelimg/7.png" alt="" />
         </div>
         
     </div>
     <div id="midpage-slideimage-thumb">
         <ul id="thumbs">
-            <li class='active' rel='1'><img src="hotelimg/1_thumb.png" alt="" onclick="showImage(0)" /></li>
-            <li rel='2'><img src="hotelimg/2_thumb.png" alt="" onclick="showImage(1)" /></li>
-				<li rel='3'><img src="hotelimg/3_thumb.png" alt="" onclick="showImage(2)" /></li>
-				<li rel='4'><img src="hotelimg/4_thumb.png" alt="" onclick="showImage(3)" /></li>
-				<li rel='5'><img src="hotelimg/5_thumb.png" alt="" onclick="showImage(4)" /></li>
-				<li rel='6'><img src="hotelimg/6_thumb.png" alt="" onclick="showImage(5)" /></li>
-				<li rel='7'><img src="hotelimg/7_thumb.png" alt="" onclick="showImage(6)" /></li>
+            <li class='active' rel='1'><img src="pageimages/hotelimg/1_thumb.png" alt="" onclick="showImage(0)" /></li>
+            <li rel='2'><img src="pageimages/hotelimg/2_thumb.png" alt="" onclick="showImage(1)" /></li>
+            <li rel='3'><img src="pageimages/hotelimg/3_thumb.png" alt="" onclick="showImage(2)" /></li>
+            <li rel='4'><img src="pageimages/hotelimg/4_thumb.png" alt="" onclick="showImage(3)" /></li>
+            <li rel='5'><img src="pageimages/hotelimg/5_thumb.png" alt="" onclick="showImage(4)" /></li>
+            <li rel='6'><img src="pageimages/hotelimg/6_thumb.png" alt="" onclick="showImage(5)" /></li>
+            <li rel='7'><img src="pageimages/hotelimg/7_thumb.png" alt="" onclick="showImage(6)" /></li>
         </ul>
         <script type="text/javascript">
 	var currentImage;

@@ -11,7 +11,7 @@ root {
 }
 body{
     background: #000;
-    background: url('../image/bg_overlay.png') no-repeat #000 center;
+    background: url('../../pageimages/image/bg_overlay.png') no-repeat #000 center;
 }
 legend{
     color: gold;
@@ -40,6 +40,7 @@ fieldset{
     width: 100%;
     height: auto;
 }
+
 #botpage{
    margin: 20px 0 0 0;
     padding: 0;

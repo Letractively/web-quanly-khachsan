@@ -3,31 +3,37 @@
 $act = "";
     if (isset($_GET['act']))
         $act = $_GET['act'];
+    //{
+    if($act=="profile")
     {
-    /*if($act=="profile")
-    {
-        include_once 'include/profile.php';
+        ?>
+<div id="midpage-post">
+    <?php
+        include_once 'include/workpages/workmidpage.php';
+        ?>
+</div>
+<?php
     }
- else {*/
+ else {
 ?>
 <div id="midpage-slideimage">
 <?php
-     include 'include/slidermidpage.php';
+     include 'include/mainpages/slidermidpage.php';
 ?>
 </div>
 <div>
-    <img style="margin-top: 3px;" src="image/banner_border_bottom.gif">
+    <img style="margin-top: 3px;" src="pageimages/image/banner_border_bottom.gif">
 </div>
 <div id="midpage-post">
     <?php
-    include 'include/midleft.php';
+    include 'include/mainpages/midleft.php';
      
     switch ($act) {
         case "roomkinds":
     ?>
             <div id="midpage-post-main">
                 <?php
-                    require_once 'roomkinds.php';
+                    require_once 'include/subpages/roomkinds.php';
                 ?>
             </div>
     <?php
@@ -36,7 +42,7 @@ $act = "";
     ?>
     <div id="midpage-post-main">
                 <?php
-                    require_once 'services.php';
+                    require_once 'include/subpages/services.php';
                 ?>
             </div>
     <?php
@@ -45,7 +51,7 @@ $act = "";
     ?>
     <div id="midpage-post-main">
                 <?php
-                    require_once 'images.php';
+                    require_once 'include/subpages/images.php';
                 ?>
             </div>
     <?php
@@ -54,7 +60,7 @@ $act = "";
     ?>
     <div id="midpage-post-main">
                 <?php
-                    require_once 'news.php';
+                    require_once 'include/subpages/news.php';
                 ?>
             </div>
     <?php
@@ -63,7 +69,7 @@ $act = "";
     ?>
     <div id="midpage-post-main">
                 <?php
-                    require_once 'feedback.php';
+                    require_once 'include/subpages/feedback.php';
                 ?>
             </div>
     <?php
@@ -72,7 +78,7 @@ $act = "";
     ?>
     <div id="midpage-post-main">
                 <?php
-                    require_once 'contact.php';
+                    require_once 'include/subpages/contact.php';
                 ?>
             </div>
     <?php
@@ -81,7 +87,7 @@ $act = "";
             ?>
             <div id="midpage-post-main">
                 <?php
-                    require_once 'homepage.php';
+                    require_once 'include/subpages/homepage.php';
                 ?>
             </div>
     <?php

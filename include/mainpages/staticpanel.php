@@ -3,30 +3,30 @@ echo '';
 ?>
 <div class="staticpanel">
     <div id="staticpanel-top" class="staticpanel-line"></div>
-    <a href="index.php">
-        <div title="Thông Tin Cá Nhân" id="staticpanel-login" class="staticpanel-button" onclick=""><!--Trang chu-->
-            <img src="icons/loginico.png" alt="Thông Tin Cá Nhân" class="staticpanel-img">         
+    <a href="index.php?act=profile">
+        <div title="Thông Tin Cá Nhân" id="staticpanel-login" class="staticpanel-button" onclick=""><!--Thong tin ca nhan-->
+            <img src="pageimages/icons/loginico.png" alt="Thông Tin Cá Nhân" class="staticpanel-img">         
         </div>
     </a>
-    <a href="index.php?act=thuephong">
+    <a href="index.php?act=profile&w=spending">
         <div title="Cho Thuê Phòng" id="staticpanel-spend" class="staticpanel-button"><!--Cho thue phong-->
-            <img src="icons/spend.png" alt="Thuê Phòng" class="staticpanel-img">
+            <img src="pageimages/icons/spend.png" alt="Thuê Phòng" class="staticpanel-img">
         </div>
     </a>
-    <a href="index.php?act=datphong">
+    <a href="index.php?act=profile&w=booking">
         <div title="Đặt Phòng" id="staticpanel-booking" class="staticpanel-button"><!--dat phong-->
-            <img src="icons/booking.png" alt="Đặt Phòng" class="staticpanel-img">
+            <img src="pageimages/icons/booking.png" alt="Đặt Phòng" class="staticpanel-img">
         </div>
     </a>
-    <a href="index.php?act=traphong">
+    <a href="index.php?act=profile&w=paying">
         <div title="Trả Phòng" id="staticpanel-pay" class="staticpanel-button"><!--tra phong-->
-            <img src="icons/pay.png" alt="Trả Phòng" class="staticpanel-img">
+            <img src="pageimages/icons/pay.png" alt="Trả Phòng" class="staticpanel-img">
         </div>
     </a>
 </a>
 <a href="index.php?act=dangxuat">
     <div title="Đăng Xuất" id="staticpanel-logout" class="staticpanel-button"><!--dang xuat-->
-        <img src="icons/logout.png" alt="Đăng Xuất" class="staticpanel-img">
+        <img src="pageimages/icons/logout.png" alt="Đăng Xuất" class="staticpanel-img">
     </div>
 </a>
 <div id="staticpanel-bot" class="staticpanel-line"></div>

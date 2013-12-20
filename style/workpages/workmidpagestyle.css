@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 21, 2013, 3:28:49 AM
+    Author     : Maxsys
+*/
+#workmidpage-contain{
+    height: auto;
+    
+    width: 99%;
+    margin: auto;
+    border:solid 2px gold;
+    border-radius: 6px;
+    box-shadow: inset 0 0 10px gold;
+    /*background: #9999ff;*/
+}
+#workmidpage-contain fieldset{
+    border:solid 1px gold;
+    border-radius: 6px;
+    margin: 10px;
+}

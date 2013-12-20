@@ -17,7 +17,7 @@ document.writeln(printSelectedMonth());
 </script>
         </div>
             </fieldset>
-        <img src="image/line.png" CLASS="mid-left-line">
+        <img src="pageimages/image/line.png" CLASS="mid-left-line">
         
         <fieldset class="mid-left">
             <legend>SỰ KIỆN</legend>
@@ -44,7 +44,7 @@ document.writeln(printSelectedMonth());
             </ul>
         </div>
          </fieldset>
-        <img src="image/line.png" CLASS="mid-left-line">
+        <img src="pageimages/image/line.png" CLASS="mid-left-line">
        
         <fieldset class="mid-left">
             <legend>LIÊN HỆ</legend>
@@ -54,6 +54,6 @@ document.writeln(printSelectedMonth());
                     <p>113</p>
         </div>
          </fieldset>
-        <img src="image/line.png" CLASS="mid-left-line">
+        <img src="pageimages/image/line.png" CLASS="mid-left-line">
        
     </div>

@@ -5,33 +5,41 @@ and open the template in the editor.
 <!DOCTYPE html>
 <?php
 session_start();
-require_once './include/functions.php';
+require_once './include/mainpages/functions.php';
 ?>
 
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><?php ShowTitle(); ?></title>
-        <link type="text/css" href="style/indexstyle.css" rel="stylesheet">
-        <link type="text/css" href="style/toppagestyle.css" rel="stylesheet">
-        <link type="text/css" href="style/midpagestyle.css" rel="stylesheet">
-        <link type="text/css" href="style/botpagestyle.css" rel="stylesheet">
-        <link type="text/css" href="style/staticpanel.css" rel="stylesheet">
-        <link type="text/css" href="style/loginstyle.css" rel="stylesheet">
-        <link type="text/css" href="style/slideimagestyle.css" rel="stylesheet">
-        <link type="text/css" href="style/midleftstyle.css" rel="stylesheet">
-        <link type="text/css" href="style/homestyle.css" rel="stylesheet">
-        <link type="text/css" href="style/staffprofilestyle.css" rel="stylesheet">
-        <link type="text/css" href="style/spendingformstyle.css" rel="stylesheet">
-        <link type="text/css" href="style/servicesstyle.css" rel="stylesheet">
-        <link type="text/css" href="style/roomkindsstyle.css" rel="stylesheet">
-        <link type="text/css" href="style/payformstyle.css" rel="stylesheet">
-        <link type="text/css" href="style/newsstyle.css" rel="stylesheet">
-        <link type="text/css" href="style/imagestyle.css" rel="stylesheet">
-        <link type="text/css" href="style/feedbackstyle.css" rel="stylesheet">
-        <link type="text/css" href="style/contactstyle.css" rel="stylesheet">
-        <link type="text/css" href="style/bookingformstyle.css" rel="stylesheet">
+        <!--mainstyle-->
+        <link href="hotelicon.ico" rel="icon" type="image/x-icon"/>
+        <link type="text/css" href="style/mainpages/indexstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/mainpages/midpagestyle.css" rel="stylesheet">
+        <link type="text/css" href="style/mainpages/botpagestyle.css" rel="stylesheet">
+        <link type="text/css" href="style/mainpages/staticpanel.css" rel="stylesheet">
+        <link type="text/css" href="style/mainpages/loginstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/mainpages/slideimagestyle.css" rel="stylesheet">
+        <link type="text/css" href="style/mainpages/midleftstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/mainpages/toppagestyle.css" rel="stylesheet">
         
+        <!--substyle-->
+        <link type="text/css" href="style/subpages/homestyle.css" rel="stylesheet">
+        <link type="text/css" href="style/subpages/servicesstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/subpages/roomkindsstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/subpages/newsstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/subpages/imagestyle.css" rel="stylesheet">
+        <link type="text/css" href="style/subpages/feedbackstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/subpages/contactstyle.css" rel="stylesheet">
+        
+        <!--workstyle-->
+        <link type="text/css" href="style/workpages/payformstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/workpages/bookingformstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/workpages/staffprofilestyle.css" rel="stylesheet">
+        <link type="text/css" href="style/workpages/spendingformstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/workpages/workmidpagestyle.css" rel="stylesheet">
+        
+        <!--adminstyle-->
         
     <script type="text/javascript" lang="javascript" src="script/jquery.js"></script>
     <script type="text/javascript" lang="javascript" src="script/jquery-ui.js"></script>
@@ -89,17 +97,17 @@ require_once './include/functions.php';
         <div id="container"><!--div bao ngoai-->
             <div id="toppage"><!--div phan tren trang web-->
                 <?php
-                    require_once './include/toppage.php';
+                    require_once './include/mainpages/toppage.php';
                 ?>
             </div>
             <div id="midpage"><!--div phan noi dung trang web-->
                 <?php
-                    require_once './include/midpage.php';
+                    require_once './include/mainpages/midpage.php';
                 ?>
             </div>
             <div id="botpage"><!--div phan footer trang web-->
                 <?php
-                    require_once './include/botpage.php';
+                    require_once './include/mainpages/botpage.php';
                 ?>
             </div>
         </div>
@@ -108,7 +116,7 @@ require_once './include/functions.php';
         ?>
         <div id="staticpanel">
     <?php
-    include_once './include/staticpanel.php';
+    include_once './include/mainpages/staticpanel.php';
     ?>
 </div>
         

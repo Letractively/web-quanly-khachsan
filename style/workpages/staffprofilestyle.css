@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 13, 2013, 8:01:49 PM
+    Author     : Maxsys
+*/
+#staffprofile{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+}
+#staffprofile table{
+    width: 50%;
+    margin: 20px;
+}
+#staffprofile table tr,td{
+    padding: 0px 0 10px 20px;
+}
+#staffprofile label{
+    text-transform: capitalize;
+    font-weight: bold;
+    color: gold;
+}
+#staffprofile-changeinfo{
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+#staffprofile-changeinfo input[type=button]{
+    height: 30px;
+    width: 120px;
+    outline: none;
+    border-radius: 4px;
+    box-shadow:  inset 0 0 10px gold;
+    color: white;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+#staffprofile-changeinfo input[type=button]:hover{
+    color: gold;
+    border: solid 1px gold;
+    cursor: pointer;
+}
