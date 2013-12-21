@@ -27,21 +27,23 @@ and open the template in the editor.
 }
 .text{
     height: 25px;
-    width: 300px;
+    width: 250px;
     border-radius: 8px;
-    border: solid 1px gold;
+    /*border: solid 1px gold;*/
+    border: none;
     opacity: 1;
     margin: 0 0 0 10px;
     padding: 2px 0 2px 8px;
     line-height: 20px;
-    /*box-shadow: inset 0 0 5px gold;*/
+    box-shadow: inset 0 0 10px gold;
     background: none;
     color: gold;
 }
 .textarea{
-    width: 300px;
+    width: 250px;
     border-radius: 8px;
-    border: solid 1px gold;
+    /*border: solid 1px gold;*/
+    border: none;
     opacity: 1;
     margin: 0 0 0 10px;
     padding: 2px 0 2px 5px;
@@ -50,40 +52,95 @@ and open the template in the editor.
     line-height: 20px;
     background: none;
     color: gold;
-    /*box-shadow: inset 0 0 5px gold;*/
-}
-#feedback .text:focus{
-    outline: none;
-    box-shadow: inset 0 0 10px gold;   
-}
-#feedback .btn:focus{
-    outline: none;
-    
-}
-#feedback .btn:active{
-    box-shadow: 0px 0px 0px 2pt gold;
-    font-size: 15px;
-}
-#feedback .textarea:focus{
-    outline: none;
     box-shadow: inset 0 0 10px gold;
+}
+.text:focus{
+    outline: none;
+    box-shadow: inset 0 0 20px gold;
+    border: solid 1px gold;
+    margin: -1px -1px -1px 9px;
+}
+
+
+.textarea:focus{
+    outline: none;
+    box-shadow: inset 0 0 20px gold;
+    border: solid 1px gold;
+    margin: -1px -1px -1px 9px;
 }
 .btn{
     height: 30px;
     width: 100px;
-    border: solid 1px gold;
+    /*border: solid 1px gold;*/
+    border: none;
     border-radius: 8px;
     cursor: pointer;
-    background:-webkit-radial-gradient(top center, gold, black);
+    //background:-webkit-radial-gradient(top center, gold, black);
+    opacity: 0.9;
     color: white;
     font-weight: bold;
-    margin: 0 0 0 10px;
+    margin: 10px 0 0 10px;
+    background: none;
+    box-shadow: inset 0 0 10px gold;
+    outline: none;
     
 }
+.btn:active{
+    box-shadow: inset 0 0 10px gold;
+    color: white;
+}
 .btn:hover{
-    background:-webkit-radial-gradient(top center, black, gold);
-    color: yellow;
+    /*background:-webkit-radial-gradient(top center, black, gold);*/
+    box-shadow: inset 0 0 20px gold;
+    color: gold;
+    border: solid 1px gold;
 }
 #feedback-info tr,td{
     padding-top:  5px;
+}
+.cbb{
+    width: 260px; 
+    height: 30px; 
+    //padding: 4px;
+    border-radius: 8px;
+    /*border: solid 1px gold;*/
+    border: none;
+    opacity: 1;
+    margin: 0 0 0 10px;
+    padding: 4px 4px 4px 8px;
+    line-height: 20px;
+    box-shadow: inset 0 0 10px gold;
+    background: none;
+    color: gold;
+}
+.cbb:focus{
+   padding: 4px 4px 4px 7px;
+    outline: none;
+    box-shadow: inset 0 0 20px gold;
+    border: solid 1px gold;
+    /*margin: -1px -1px -1px 9px;*/
+}
+.num{
+    width: 245px; 
+    height: 25px; 
+    //padding: 4px;
+    border-radius: 8px;
+    /*border: solid 1px gold;*/
+    border: none;
+    opacity: 1;
+    margin: 0 0 0 10px;
+    padding: 4px 4px 4px 8px;
+    line-height: 20px;
+    box-shadow: inset 0 0 10px gold;
+    background: none;
+    color: gold;
+    line-height: 15px;
+}
+.num:focus{
+   padding: 4px 4px 4px 7px;
+    outline: none;
+    box-shadow: inset 0 0 20px gold;
+    border: solid 1px gold;
+    
+    /*margin: -1px -1px -1px 9px;*/
 }

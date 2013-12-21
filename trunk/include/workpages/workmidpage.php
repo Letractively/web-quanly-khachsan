@@ -14,6 +14,9 @@ $work = "";
     <?php
      
     switch ($work) {
+        case "changepro":
+                    require_once 'include/workpages/changeprofile.php';
+            break;
         case "booking":
                     require_once 'include/workpages/bookingform.php';
             break;
@@ -22,6 +25,9 @@ $work = "";
             break;
         case "spending":
                     require_once 'include/workpages/spendingform.php';
+            break;
+        case "useservice":
+                    require_once 'include/workpages/useservice.php';
             break;
         default:
                     require_once 'include/workpages/staffprofile.php';

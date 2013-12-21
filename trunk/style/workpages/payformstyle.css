@@ -4,6 +4,57 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
+    Created on : Dec 13, 2013, 8:02:05 PM
+    Author     : Maxsys
+*/
+
+#payingform{
+    height: 350px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#payingform-useservice{
+    height: auto;
+    width: 50%;
+    float: left;
+    margin-bottom:  50px;
+}
+#payingform-useroom{
+    height: auto;
+    width: 50%;
+    float: left;
+}
+#payingform-chosecustomer{
+    height: auto;
+    width: 45%;
+    float: left;
+}
+#payingform-useservice-info{
+    height: auto;
+    width: 100%;
+}
+#payingform-paybtn{
+    float: left;
+    clear: both;
+    height: auto;
+    width: 300px;
+}
+#payingform label{
+    color: white;
+    text-transform: capitalize;
+
+}
+#payingform p{
+    margin-left: 15px;
+    color: gold;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
     Created on : Dec 13, 2013, 8:03:36 PM
     Author     : Maxsys
 */

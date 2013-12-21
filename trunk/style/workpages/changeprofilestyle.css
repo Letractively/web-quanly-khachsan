@@ -7,27 +7,19 @@ and open the template in the editor.
     Created on : Dec 13, 2013, 8:01:49 PM
     Author     : Maxsys
 */
-#staffprofile{
+#changeprofile{
     margin: auto;
     padding: 0;
     height: auto;
-    width: 40%;
+    width: 50%;
 }
 
-#staffprofile-info{
+#changeprofile-info{
     width: 100%;
     margin: 20px;
 }
-#staffprofile-info > tr td{
+/*#staffprofile-info > tr td{
     padding: 0px 0 10px 20px;
-}
-#staffprofile label{
-    color: white;
-    text-transform: capitalize;
-}
-#staffprofile P{
-    color: gold;
-    margin-left: 10px;
 }
 
 /*#staffprofile-info{
@@ -38,8 +30,12 @@ and open the template in the editor.
     padding: 0px 0 10px 20px;
 }*/
 
-
-
+/*
+#staffprofile label{
+    text-transform: capitalize;
+    font-weight: bold;
+    color: gold;
+}
 #staffprofile-changeinfo{
     height: 30px;
     margin: 0;
@@ -62,3 +58,4 @@ and open the template in the editor.
     border: solid 1px gold;
     cursor: pointer;
 }
+*/

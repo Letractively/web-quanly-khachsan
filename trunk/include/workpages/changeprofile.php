@@ -6,56 +6,48 @@
  * and open the template in the editor.
  */
 ?>
-<div id="staffprofile">
+<div id="changeprofile">
     <fieldset>
-        <legend>TRANG THÔNG TIN CÁ NHÂN</legend>
-        <table id="staffprofile-info">
+        <legend>ĐỔI THÔNG TIN CÁ NHÂN</legend>
+        <table id="changeprofile-info">
             <tr>
                 <td>
-                    <label>mã số nhân viên :</label>
+                    <label>Mã số nhân viên :</label>
                 </td>
                 <td>
-                    <p>0001</p>
+                    <input class="text" type="text" placeholder="Mã số nhân viên..." name="changeinfo-msnv">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label>họ và tên :</label>
+                    <label>Họ và tên :</label>
                 </td>
                 <td>
-                    <p>Nguyễn Văn A</p>
+                    <input class="text" type="text" placeholder="Họ tên nhân viên..." name="changeinfo-name">
                 </td>
-                </tr>
-                <tr>
+            </tr>
+            <tr>
                 <td>
-                    <label>giới tính :</label>
-                </td>
-                <td>
-                    <p>Nam</p>
-                </td>
-                </tr>
-                <tr>
-                <td>
-                    <label>chức vụ :</label>
+                    <label>Giới tính :</label>
                 </td>
                 <td>
-                    <p>Lễ tân</p>
+                    <input class="text" type="text" placeholder="Giới tính (Nam/Nữ)" name="changeinfo-sex">
                 </td>
-                </tr>
+            </tr>
             <tr>
                 <td>
                     <label>Ngày sinh :</label>
                 </td>
                 <td>
-                    <p>30/09/1992</p>
+                    <input class="text" type="date" name="changeinfo-bdate">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label>số điên thoại :</label>
+                    <label>Số điên thoại :</label>
                 </td>
                 <td>
-                    <p>0123456789</p>
+                    <input class="text" type="tel" placeholder="Số điện thoại..." name="changeinfo-phone">
                 </td>
             </tr>
             <tr>
@@ -63,7 +55,7 @@
                     <label>Email :</label>
                 </td>
                 <td>
-                    <p>abc09@gmail.com</p>
+                    <input class="text" type="email" placeholder="Thư điện tử..." name="changeinfo-email">
                 </td>
             </tr>
             <tr>
@@ -71,13 +63,14 @@
                     <label>địa chỉ :</label>
                 </td>
                 <td>
-                    <p>9/6 Hai Bà Tưng</p>
+                    <input class="text" type="text" placeholder="Địa chỉ..." name="changeinfo-place">
                 </td>
             </tr>
             <tr>
                 <td></td>
                 <td>
-                    <input class="btn" type="button" value="Đổi thông tin" name="changeinfo" onclick="window.open('index.php?act=profile&w=changepro','_self')">
+                    <input class="btn" type="reset" value="Huỷ" name="changeinfo-reset">
+                    <input class="btn" type="submit" value="Đổi thông tin" name="changeinfo-submit">
                 </td>
             </tr>
         </table>
