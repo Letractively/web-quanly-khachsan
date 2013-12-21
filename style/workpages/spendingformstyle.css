@@ -8,3 +8,24 @@ and open the template in the editor.
     Author     : Maxsys
 */
 
+#spendingform{
+    height: 300px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#spendingform-form{
+    height: auto;
+    width: 45%;
+    float: left;
+    margin-left:  45px;
+}
+#spendingform-addcustomer{
+    height: auto;
+    width: 45%;
+    float: left;
+}
+#spendingform-form-info{
+    height: auto;
+    width: 100%;
+}

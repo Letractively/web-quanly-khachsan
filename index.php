@@ -38,6 +38,9 @@ require_once './include/mainpages/functions.php';
         <link type="text/css" href="style/workpages/staffprofilestyle.css" rel="stylesheet">
         <link type="text/css" href="style/workpages/spendingformstyle.css" rel="stylesheet">
         <link type="text/css" href="style/workpages/workmidpagestyle.css" rel="stylesheet">
+        <link type="text/css" href="style/workpages/addcustomerstyle.css" rel="stylesheet">
+        <link type="text/css" href="style/workpages/changeprofilestyle.css" rel="stylesheet">
+        <link type="text/css" href="style/workpages/useservicestyle.css" rel="stylesheet">
         
         <!--adminstyle-->
         

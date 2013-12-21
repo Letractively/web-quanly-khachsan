@@ -18,17 +18,18 @@ echo '';
             <img src="pageimages/icons/booking.png" alt="Đặt Phòng" class="staticpanel-img">
         </div>
     </a>
+    <a href="index.php?act=profile&w=useservice">
+    <div title="Dùng dịch vụ" id="staticpanel-logout" class="staticpanel-button"><!--dung dich vu-->
+        <img src="pageimages/icons/service.png" alt="Dùng dịch vụ" class="staticpanel-img">
+    </div>
+</a>
     <a href="index.php?act=profile&w=paying">
         <div title="Trả Phòng" id="staticpanel-pay" class="staticpanel-button"><!--tra phong-->
             <img src="pageimages/icons/pay.png" alt="Trả Phòng" class="staticpanel-img">
         </div>
     </a>
 </a>
-<a href="index.php?act=dangxuat">
-    <div title="Đăng Xuất" id="staticpanel-logout" class="staticpanel-button"><!--dang xuat-->
-        <img src="pageimages/icons/logout.png" alt="Đăng Xuất" class="staticpanel-img">
-    </div>
-</a>
+
 <div id="staticpanel-bot" class="staticpanel-line"></div>
 </div>
 

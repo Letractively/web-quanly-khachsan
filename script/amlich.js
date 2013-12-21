@@ -1,11 +1,11 @@
 /**
- * Copyright 2004 Ho Ngoc Duc [http://come.to/duc]. All Rights Reserved.<p>
+ * All Rights Reserved.<p>
  * Permission to use, copy, modify, and redistribute this software and its
  * documentation for personal, non-commercial use is hereby granted provided that
  * this copyright notice appears in all copies.
  */
 
-var ABOUT = "\u00C2m l\u1ECBch Vi\u1EC7t Nam - Version 0.8"+"\n\u00A9 2004 H\u1ED3 Ng\u1ECDc \u0110\u1EE9c [http://come.to/duc]";
+var ABOUT = "\u00C2m l\u1ECBch Vi\u1EC7t Nam - Version 0.8"+' \"XuanHongHotel.com.vn\"';
 var TK19 = new Array(
 	0x30baa3, 0x56ab50, 0x422ba0, 0x2cab61, 0x52a370, 0x3c51e8, 0x60d160, 0x4ae4b0, 0x376926, 0x58daa0,
 	0x445b50, 0x3116d2, 0x562ae0, 0x3ea2e0, 0x28e2d2, 0x4ec950, 0x38d556, 0x5cb520, 0x46b690, 0x325da4,
@@ -380,12 +380,13 @@ function getGioHoangDao(jd) {
 
 var DAYNAMES = new Array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
 var PRINT_OPTS = new OutputOptions();
-var FONT_SIZES = new Array("9pt", "13pt", "17pt");
+var FONT_SIZES = new Array("8pt", "11pt", "15pt");
 var TAB_WIDTHS = new Array("180px", "420px", "600px");
 
 function OutputOptions() {
-	this.fontSize = "13pt";
+	this.fontSize = "11pt";
 	this.tableWidth = "420px";
+        
 }
 
 function setOutputSize(size) {
@@ -443,12 +444,12 @@ function printStyle() {
 	res += '<style type="text/css">\n';
 	res += '<!--\n';
 	//res += '  body {margin:0}\n';
-	res += '  .tennam {text-align:center; font-size:150%; line-height:120%; font-weight:bold; color:#000000; background-color: #CCCCCC}\n';
-	res += '  .thang {font-size: '+fontSize+'; padding:1; line-height:100%; font-family:Tahoma,Verdana,Arial; table-layout:fixed}\n';
+	res += '  .tennam {text-align:left; font-size:150%; line-height:120%; font-weight:bold; color:#000000; background-color: #CCCCCC}\n';
+	res += '  .thang {font-size: '+fontSize+'; padding:0; line-height:100%; font-family:Tahoma,Verdana,Arial; table-layout:fixed}\n';
 	res += '  .tenthang {text-align:center; font-size:125%; line-height:100%; font-weight:bold; color:black; background-color: #CCFFCC}\n';
-	res += '  .navi-l {text-align:center; font-size:75%; line-height:100%; font-family:Verdana,Times New Roman,Arial; font-weight:bold; color:red; background-color: #CCFFCC}\n';
-	res += '  .navi-r {text-align:center; font-size:75%; line-height:100%; font-family:Verdana,Arial,Times New Roman; font-weight:bold; color:#330033; background-color: #CCFFCC}\n';
-	res += '  .ngaytuan {width:14%; text-align:center; font-size:125%; line-height:100%; color:#330033; background-color: #FFFFCC}\n';
+	res += '  .navi-l {text-align:left; font-size:75%; line-height:100%; font-family:Verdana,Times New Roman,Arial; font-weight:bold; color:red; background-color: #CCFFCC}\n';
+	res += '  .navi-r {text-align:left; font-size:75%; line-height:100%; font-family:Verdana,Arial,Times New Roman; font-weight:bold; color:#330033; background-color: #CCFFCC}\n';
+	res += '  .ngaytuan {width:14%; text-align:left; font-size:125%; line-height:100%; color:#330033; background-color: #FFFFCC}\n';
 	res += '  .ngaythang {background-color:#FDFDF0}\n';
 	res += '  .homnay {background-color:#FFF000}\n';
 	res += '  .tet {background-color:#FFCC99}\n';
@@ -472,7 +473,7 @@ function printTable(mm, yy) {
 	var LunarHead = getYearCanChi(ld1.year);
 	var res = "";
 //	res += ('<table class="thang" border="2" cellpadding="1" cellspacing="1" width="'+PRINT_OPTS.tableWidth+'">\n');
-res += ('<table class="thang"  border="2" cellpadding="1" cellspacing="1" width="265px" height="215px" cursor="pointer">\n');
+res += ('<table class="thang" padding="0" margin="0"  border="2" cellpadding="1" cellspacing="1" width="270px" height="215px" cursor="pointer">\n');
 	res += printHead(mm, yy);
 	for (i = 0; i < 6; i++) {
 		res += ("<tr>\n");

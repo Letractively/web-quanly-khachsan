@@ -8,24 +8,24 @@ and open the template in the editor.
     Author     : Maxsys
 */
 
-#bookingform{
-    height: 300px;
+#serviceuseform{
+    height: 350px;
     width: 100%;
     margin: 0;
     padding: 0;
 }
-#bookingform-form{
+#serviceuseform-form{
     height: auto;
     width: 45%;
     float: left;
     margin-left:  45px;
 }
-#bookingform-addcustomer{
+#serviceuseform-addcustomer{
     height: auto;
     width: 45%;
     float: left;
 }
-#bookingform-form-info{
+#serviceuseform-form-info{
     height: auto;
     width: 100%;
 }

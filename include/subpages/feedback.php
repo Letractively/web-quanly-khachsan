@@ -28,12 +28,17 @@
                     <tr>
                         <td><label>Ý kiến phản hồi : </label></td>
                         <td><textarea   class="textarea" placeholder="Ý kiến phản hồi..." cols="1" rows="10"></textarea></td>
+                    </tr
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="reset" name="reset" value="Huỷ" class="btn">
+                            <input type="submit" name="submit" value="Gửi" class="btn" >
+                        </td>
+                    
                     </tr>
                 </table>
-                <div id="feedback-button">
-                    <input type="reset" name="reset" value="Huỷ" class="btn">
-                    <input type="submit" name="submit" value="Gửi" class="btn">
-                </div>
+                    
             </form>
         </fieldset>
     </div>
