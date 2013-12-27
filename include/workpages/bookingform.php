@@ -9,7 +9,8 @@
 <div id="bookingform">
     <div id="bookingform-addcustomer">
         <?php
-            require_once './include/workpages/addcustomer.php';
+            require_once './Views/KhachHangView.php';
+        //require_once '../include/workpages/addcustomer.php';
         ?>
     </div>
     <div id="bookingform-form">
@@ -50,7 +51,7 @@
                         <td></td>
                         <td>
                             <input class="btn" type="reset" value="Huỷ" name="reset">
-                            <input class="btn" type="submit" value="Thêm" name="submit">
+                            <input class="btn" type="submit" value="Thêm" name="submit" onclick="window.open=('_self');">
                         </td>
                     </tr>
              </table>

@@ -6,15 +6,11 @@ if (!$db) {
     exit();
     
 }
-mysql_select_db("quanlykhachsan");
+mysql_select_db("qlks");
 ?>
-<html id="addcustomer-add">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-    </head>
-   
-       <p>Thêm khách hàng</p>
-       <form action ="KhachHangView.php" Method ="POST">
+<fieldset id="addcustomer-add">
+    <legend>Thêm khách hàng</legend>
+       <form action ="index.php?act=profile&w=spending" Method ="POST">
                 <table>
                     <tr>
                         <td><label>Mã khách hàng :</label></td>
@@ -33,6 +29,10 @@ mysql_select_db("quanlykhachsan");
                         <td><input class="text" type="tel" name="sdt" placeholder="Số điện thoại..."></td>
                     </tr>
                     <tr>
+                        <td><label>Email :</label></td>
+                        <td><input class="text" type="email" name="email" placeholder="Thư điện tử..."></td>
+                    </tr>
+                    <tr>
                         <td></td>
                         <td>
                             <input class="btn" type="reset" value="Huỷ" name="reset" >
@@ -47,17 +47,22 @@ mysql_select_db("quanlykhachsan");
            $tenkh = $_POST["tenkh"];
            $diachi = $_POST["diachi"];
            $sdt = $_POST["sdt"];
+           $email =$_POST["email"];
            
            if (!is_numeric($makh) ){
                echo "Kiểm tra thông tin";
                exit();
            }
            $sql = "INSERT INTO khachhang VALUES
-               ('$makh','$tenkh','$diachi','$sdt')";
+               ('$makh','$tenkh','$diachi','$sdt','$email',1)";
            $result = mysql_query($sql,$db);
            if ($result) {
                echo "<p align ='center'>Thành Công</p>";
            }
+           else{
+               echo "error".mysql_error();
+               exit();
+           }
        }
   ?>
-</html>
+</fieldset>

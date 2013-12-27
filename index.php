@@ -122,6 +122,7 @@ require_once './include/mainpages/functions.php';
     include_once './include/mainpages/staticpanel.php';
     ?>
 </div>
+
         
         
         
