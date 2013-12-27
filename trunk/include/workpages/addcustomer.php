@@ -1,14 +1,16 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+<?php 
+//kết nối csdl
+$db = mysql_connect("localhost", "root", "");
+if (!$db) {
+    echo "Không thể kết nối";
+    exit();
+    
+}
+mysql_select_db("quanlykhachsan");
 ?>
 <fieldset id="addcustomer-add">
        <legend>Thêm khách hàng</legend>
-            <form>
+       <form>
                 <table>
                     <tr>
                         <td><label>Mã khách hàng :</label></td>
@@ -36,3 +38,22 @@
              </table>
       </form>
 </fieldset>
+<?php
+       if (isset($_POST["makh"]) && isset($_POST["tenkh"])) {
+           $makh = $_POST["makh"];
+           $tenkh = $_POST["tenkh"];
+           $diachi = $_POST["diachi"];
+           $sdt = $_POST["sdt"];
+           
+           if (!is_numeric($makh) ){
+               echo "Kiểm tra thông tin";
+               exit();
+           }
+           $sql = "INSERT INTO khachhang VALUES
+               ('$makh','$tenkh','$diachi','$sdt')";
+           $result = mysql_query($sql,$db);
+           if ($result) {
+               echo "<p align ='center'>Thành Công</p>";
+           }
+       }
+  ?>

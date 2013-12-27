@@ -3,12 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/wamp/www/web-quanly-khachsan/Views/KhachHangView.php</file>
             <file>file:/C:/wamp/www/web-quanly-khachsan/index.php</file>
-            <file>file:/C:/wamp/www/web-quanly-khachsan/include/subpages/feedback.php</file>
-            <file>file:/C:/wamp/www/web-quanly-khachsan/include/workpages/workmidpage.php</file>
-            <file>file:/C:/wamp/www/web-quanly-khachsan/style/workpages/workmidpagestyle.css</file>
-            <file>file:/C:/wamp/www/web-quanly-khachsan/include/workpages/staffprofile.php</file>
-            <file>file:/C:/wamp/www/web-quanly-khachsan/style/workpages/staffprofilestyle.css</file>
+            <file>file:/C:/wamp/www/web-quanly-khachsan/include/mainpages/signedfield.php</file>
         </group>
     </open-files>
 </project-private>

@@ -8,7 +8,7 @@ if (!$db) {
     exit();
     
 }
-mysql_select_db("quanlykhachsan");
+mysql_select_db("qlks");
 
 ?>
 <div id="serviceuseform">

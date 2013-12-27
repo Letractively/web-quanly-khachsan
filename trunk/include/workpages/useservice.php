@@ -9,7 +9,7 @@
 <div id="serviceuseform">
     <div id="serviceuseform-addcustomer">
         <?php
-            require_once './include/workpages/addcustomer.php';
+            require_once './Views/KhachHangView.php';
         ?>
     </div>
     <div id="serviceuseform-form">
