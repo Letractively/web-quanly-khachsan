@@ -9,17 +9,17 @@
 				<td colspan="2">
 					<?php
 						if(isset($_POST['addnew'])){
-							$role_name = $_POST['role_name'];
-							$note = $_POST['note'];
-							if($role_name == ""){
+							$tenvaitro = $_POST['tenvaitro'];
+							$ghichu = $_POST['ghichu'];
+							if($tenvaitro == ""){
 								echo "<span style='color:red;'>Lỗi: Tên vai trò không được trống.</span>";
-							}else if(role_exists($role_name)){
+							}else if(role_exists($tenvaitro)){
 									echo "<span style='color:red;'>Lỗi: Tên quyền đã tồn tại.</span>";
 								} else {
 								if(isset($_POST['cap'])){
-									$qr = "insert into role(role_name, capability, note) values('$role_name','".serialize($_POST['cap'])."','$note')";
+									$qr = "insert into vaitro(tenvaitro, quyen, ghichu) values('$tenvaitro','".serialize($_POST['cap'])."','$ghichu')";
 								}else{
-									$qr = "insert into role(role_name, capability, note) values('$role_name','','$note')";
+									$qr = "insert into vaitro(tenvaitro, quyen, ghichu) values('$tenvaitro','','$ghichu')";
 								}
 								$cnn = DB::StaticConnect();
 								$rs = DB::ExecuteQuery($qr, $cnn);
@@ -33,24 +33,24 @@
 			</tr>
 			<tr>
 				<td>
-					<label for="role_name">Tên vai trò</label>
+					<label for="tenvaitro">Tên vai trò</label>
 				</td>
 				<td>
-					<input type="text" autocomplete="off" name="role_name" id="role_name" size="30">
+					<input type="text" autocomplete="off" name="tenvaitro" id="tenvaitro" size="30">
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<label for="capability">Quyền</label>
+					<label for="quyen">Quyền</label>
 				</td>
 				<td>
 					<?php 
 						$cnn = DB::StaticConnect();
-						$rs = DB::ExecuteQuery("select capability_id, capability_label from capability", $cnn);
+						$rs = DB::ExecuteQuery("select idquyen, tenhienthi from quyen", $cnn);
 						if(mysql_num_rows($rs) > 0){
 							while($cap = mysql_fetch_assoc($rs)){
 							?>
-							<label class="item" for="<?php echo $cap['capability_id']; ?>"><input type="checkbox" name="cap[]" value="<?php echo $cap['capability_id']; ?>" id="<?php echo $cap['capability_id']; ?>"> <?php echo $cap['capability_label']; ?></label>
+							<label class="item" for="<?php echo $cap['idquyen']; ?>"><input type="checkbox" name="cap[]" value="<?php echo $cap['idquyen']; ?>" id="<?php echo $cap['idquyen']; ?>"> <?php echo $cap['tenhienthi']; ?></label>
 							<?php
 							}
 						}else{
@@ -61,10 +61,10 @@
 			</tr>
 			<tr>
 				<td>
-					<label for="note">Ghi chú</label>
+					<label for="ghichu">Ghi chú</label>
 				</td>
 				<td>
-					<textarea name="note" id="note" cols="30" rows="10"></textarea>
+					<textarea name="ghichu" id="ghichu" cols="30" rows="10"></textarea>
 				</td>
 			</tr>
 			<tr>

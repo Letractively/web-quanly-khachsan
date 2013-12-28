@@ -1,21 +1,21 @@
 <div class="full_w">
-	<div class="h_title">Thêm mới</div>
+	<div class="h_title">Cập nhật</div>
 	<div class="entry">
 		<div class="sep">
 			<?php
-				if(isset($_GET['user_id'])){header("dashboard.php?type=user&action=all");}
-				$user_id = $_GET['user_id'];
+				if(isset($_GET['idtaikhoan'])){header("dashboard.php?type=user&action=all");}
+				$idtaikhoan = $_GET['idtaikhoan'];
 				$cnn = DB::StaticConnect();
-				$rs = DB::ExecuteQuery("select * from user where user_id = '".$user_id."'", $cnn);
-				$user = mysql_fetch_assoc($rs);
+				$rs = DB::ExecuteQuery("select * from taikhoan where idtaikhoan = '".$idtaikhoan."'", $cnn);
+				$taikhoan = mysql_fetch_assoc($rs);
 				//==================================
 				if(isset($_POST['update'])){
-					$username = $_POST['username'];
-					$role = $_POST['role']; $status = $_POST['status'];
-					$note = $_POST['note'];
+					//$tentk = $_POST['tentk'];
+					$vaitro = $_POST['vaitro']; $tinhtrang = $_POST['tinhtrang'];
+					$ghichu = $_POST['ghichu'];
 
 					$cnn = DB::StaticConnect();
-					$rs = DB::ExecuteQuery("update user set role = '$role', status = '$status', note = '$note' where user_id = '$user_id'", $cnn);
+					$rs = DB::ExecuteQuery("update taikhoan set vaitro = '$vaitro', tinhtrang = '$tinhtrang', ghichu = '$ghichu' where idtaikhoan = '$idtaikhoan'", $cnn);
 					if($rs){
 						echo "<script>alert('Cập nhật thành công!'); location.href='dashboard.php?type=user&action=all';</script>";
 					}else{
@@ -30,17 +30,17 @@
 		<form action="" method="post">
 		<tr>
 			<td>Tên đăng nhập</td>
-			<td><input disabled value="<?php echo $user['user_name']; ?>" type="text" autocomplete="off" require name="username"></td>
+			<td><input disabled value="<?php echo $taikhoan['tentk']; ?>" type="text" autocomplete="off" require name="tentk"></td>
 		</tr>
 		<tr>
 			<td>Vai trò</td>
 			<td>
-				<select name="loaiphong" id="loaiphong">
+				<select name="vaitro" id="vaitro">
 					<?php 
 						$cnn = DB::StaticConnect();
-						$rs = DB::ExecuteQuery("select loaiphong from loaiphong", $cnn);
-						while($row = mysql_fetch_assoc($rs)){
-							?><option <?php if($phong['loaiphong'] == $row['loaiphong']) echo "selected"; ?> value="<?php echo $row['loaiphong']; ?>"><?php echo $row['loaiphong']; ?></option><?php
+						$rs = DB::ExecuteQuery("select idvaitro, tenvaitro from vaitro", $cnn);
+						while($role = mysql_fetch_assoc($rs)){
+							?><option <?php if($taikhoan['vaitro'] == $role['idvaitro']) echo "selected"; ?> value="<?php echo $role['idvaitro']; ?>"><?php echo $role['tenvaitro']; ?></option><?php
 						}
 					?>
 				</select>
@@ -49,15 +49,15 @@
 		<tr>
 			<td>Tình trạng</td>
 			<td>
-				<select name="status" id="status">
-					<option <?php if($user['status'] == 1) echo "selected"; ?> value="1">Hoạt động</option>
-					<option <?php if($user['status'] == 0) echo "selected"; ?> value="0">Khóa</option>
+				<select name="tinhtrang" id="tinhtrang">
+					<option <?php if($taikhoan['tinhtrang'] == 1) echo "selected"; ?> value="1">Hoạt động</option>
+					<option <?php if($taikhoan['tinhtrang'] == 0) echo "selected"; ?> value="0">Khóa</option>
 				</select>
 			</td>
 		</tr>
 		<tr>
 			<td>Ghi chú</td>
-			<td><textarea name="note" cols="40" rows="5"><?php echo $user['note']; ?></textarea></td>
+			<td><textarea name="ghichu" cols="40" rows="5"><?php echo $taikhoan['ghichu']; ?></textarea></td>
 		</tr>
 		<tr>
 			<td colspan="2" style="text-align: left;"><input type="submit" name="update" class="button" value="Cập nhật"></td>

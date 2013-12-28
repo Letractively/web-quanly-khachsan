@@ -9,17 +9,17 @@
 				<td colspan="2">
 					<?php
 						if(isset($_POST['addnew'])){
-							$capability_name = $_POST['capability_name'];
-							$note = $_POST['note'];
-							$capability_label = $_POST['capability_label'];
-							if($capability_name == "" || $capability_label == ""){
+							$tenquyen = $_POST['tenquyen'];
+							$ghichu = $_POST['ghichu'];
+							$tenhienthi = $_POST['tenhienthi'];
+							if($tenquyen == "" || $tenhienthi == ""){
 								echo "<span style='color:red;'>Lỗi: Tên quyền và tên hiển thị không được trống.</span>";
 							}else{
-								if(capability_exists($capability_name)){
+								if(capability_exists($tenquyen)){
 									echo "<span style='color:red;'>Lỗi: Tên quyền đã tồn tại.</span>";
 								}else{
 									$cnn = DB::StaticConnect();
-									$rs = DB::ExecuteQuery("insert into capability(capability_name, capability_label, note) values('$capability_name','$capability_label','$note')", $cnn);
+									$rs = DB::ExecuteQuery("insert into quyen(tenquyen, tenhienthi, ghichu) values('$tenquyen','$tenhienthi','$ghichu')", $cnn);
 									if($rs){
 										echo "<span style='color:blue;'>Thêm quyền thành công.</span>";
 									}
@@ -32,26 +32,26 @@
 			</tr>
 			<tr>
 				<td>
-					<label for="capability_name">Tên quyền</label>
+					<label for="tenquyen">Tên quyền</label>
 				</td>
 				<td>
-					<input type="text" autocomplete="off" name="capability_name" id="capability_name" size="30">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<label for="capability_label">Tên hiển thị</label>
-				</td>
-				<td>
-					<input type="text" autocomplete="off" name="capability_label" id="capability_label" size="30">
+					<input type="text" autocomplete="off" name="tenquyen" id="tenquyen" size="30">
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<label for="note">Ghi chú</label>
+					<label for="tenhienthi">Tên hiển thị</label>
 				</td>
 				<td>
-					<textarea name="note" id="note" cols="30" rows="10"></textarea>
+					<input type="text" autocomplete="off" name="tenhienthi" id="tenhienthi" size="30">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="ghichu">Ghi chú</label>
+				</td>
+				<td>
+					<textarea name="ghichu" id="ghichu" cols="30" rows="10"></textarea>
 				</td>
 			</tr>
 			<tr>

@@ -8,28 +8,28 @@
 			<tr>
 				<td colspan="2">
 					<?php
-						if(isset($_GET['role_id'])){
-							$role_id = (int)$_GET['role_id'];
+						if(isset($_GET['idvaitro'])){
+							$idvaitro = (int)$_GET['idvaitro'];
 							$cnn = DB::StaticConnect();
-							$rs = DB::ExecuteQuery("select * from role where role_id = '$role_id'", $cnn);
+							$rs = DB::ExecuteQuery("select * from vaitro where idvaitro = '$idvaitro'", $cnn);
 							$role = mysql_fetch_assoc($rs);
 						}else{
 							header("location: dashboard.php?type=capability&action=all");
 						}
 						//=================================================
 						if(isset($_POST['update'])){
-							$role_name = $_POST['role_name'];
-							$note = $_POST['note'];
-							if($role_name == ""){
+							$tenvaitro = $_POST['tenvaitro'];
+							$ghichu = $_POST['ghichu'];
+							if($tenvaitro == ""){
 								echo "<span style='color:red;'>Lỗi: Tên vai trò không được trống.</span>";
 							}else{
-									if(role_exists($role_name)){
+									if(role_exists($tenvaitro)){
 									echo "<span style='color:red;'>Lỗi: Tên vai trò đã tồn tại.</span>";}
 									else{
 										if(isset($_POST['cap'])){
-									$qr = "update role set role_name = '$role_name', capability = '".serialize($_POST['cap'])."', note = '$note' where role_id = '$role_id'";
+									$qr = "update vaitro set tenvaitro = '$tenvaitro', quyen = '".serialize($_POST['cap'])."', ghichu = '$ghichu' where idvaitro = '$idvaitro'";
 								}else{
-									$qr = "update role set role_name = '$role_name', capability = '".serialize($_POST['cap'])."', note = '$note' where role_id = '$role_id'";
+									$qr = "update vaitro set tenvaitro = '$tenvaitro', quyen = '".serialize($_POST['cap'])."', ghichu = '$ghichu' where idvaitro = '$idvaitro'";
 								}
 								$cnn = DB::StaticConnect();
 								$rs = DB::ExecuteQuery($qr, $cnn);
@@ -45,25 +45,25 @@
 			</tr>
 			<tr>
 				<td>
-					<label  for="role_name">Tên vai trò</label>
+					<label  for="tenvaitro">Tên vai trò</label>
 				</td>
 				<td>
-					<input value="<?php echo $role['role_name']; ?>" type="text" autocomplete="off" name="role_name" id="role_name" size="30">
+					<input value="<?php echo $role['tenvaitro']; ?>" type="text" autocomplete="off" name="tenvaitro" id="tenvaitro" size="30">
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<label for="capability">Quyền</label>
+					<label for="quyen">Quyền</label>
 				</td>
 				<td>
 					<?php 
 						$cnn = DB::StaticConnect();
-						$rs = DB::ExecuteQuery("select capability_id, capability_label from capability", $cnn);
-						$caps = unserialize($role['capability']);
+						$rs = DB::ExecuteQuery("select idquyen, tenhienthi from quyen", $cnn);
+						$caps = unserialize($role['quyen']);
 						if(mysql_num_rows($rs) > 0){
 							while($cap = mysql_fetch_assoc($rs)){
 								?>
-								<label class="item" for="<?php echo $cap['capability_id']; ?>"><input <?php if(in_array($cap['capability_id'], $caps)) echo "checked"; ?> type="checkbox" name="cap[]" value="<?php echo $cap['capability_id']; ?>" id="<?php echo $cap['capability_id']; ?>"> <?php echo $cap['capability_label']; ?></label>
+								<label class="item" for="<?php echo $cap['idquyen']; ?>"><input <?php if(in_array($cap['idquyen'], $caps)) echo "checked"; ?> type="checkbox" name="cap[]" value="<?php echo $cap['idquyen']; ?>" id="<?php echo $cap['idquyen']; ?>"> <?php echo $cap['tenhienthi']; ?></label>
 								<?php
 							}
 						}else{
@@ -74,10 +74,10 @@
 			</tr>
 			<tr>
 				<td>
-					<label for="note">Ghi chú</label>
+					<label for="ghichu">Ghi chú</label>
 				</td>
 				<td>
-					<textarea name="note" id="note" cols="30" rows="10"><?php echo $role['note']; ?></textarea>
+					<textarea name="ghichu" id="ghichu" cols="30" rows="10"><?php echo $role['ghichu']; ?></textarea>
 				</td>
 			</tr>
 			<tr>

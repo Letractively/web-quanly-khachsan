@@ -17,22 +17,22 @@
 			<?php
 				$paged = 1; 
 				if(isset($_GET['paged'])) $paged = $_GET['paged'];
-				$showposts = 5;
+				$showposts = 6;
 				$begin = ($paged - 1) * $showposts;
 				$cnn = DB::StaticConnect();
-				$rs = DB::ExecuteQuery("select * from user limit $begin, $showposts", $cnn);
+				$rs = DB::ExecuteQuery("select * from taikhoan limit $begin, $showposts", $cnn);
 				$cnn2 = DB::StaticConnect();
-				$rs2 = DB::ExecuteQuery("select * from user", $cnn2);
+				$rs2 = DB::ExecuteQuery("select * from taikhoan", $cnn2);
 				while($row = mysql_fetch_assoc($rs)){
 					?>
 					<tr>
-						<td class="align-center"><?php echo $row['user_id']; ?></td>
-						<td><?php echo $row['user_name']; ?></td>
-						<td><?php echo date("d/m/Y H:i:s", strtotime($row['date_create'])); ?></td>
-						<td><?php echo $row['note'] ?></td>
+						<td class="align-center"><?php echo $row['idtaikhoan']; ?></td>
+						<td><?php echo $row['tentk']; ?></td>
+						<td><?php echo date("d/m/Y H:i:s", strtotime($row['ngaytao'])); ?></td>
+						<td><?php echo $row['ghichu'] ?></td>
 						<td>
-							<a href="dashboard.php?type=user&action=update&user_id=<?php echo $row['user_id']; ?>" class="table-icon edit" title="Sửa"></a>
-							<a href="javascript:void(0);" onclick="if(confirm('Bạn có chắc xóa thành viên này?')) location.href='dashboard.php?type=user&action=delete&user_id=<?php echo $row['user_id']; ?>';" class="table-icon delete" title="Xóa"></a>
+							<a href="dashboard.php?type=user&action=update&idtaikhoan=<?php echo $row['idtaikhoan']; ?>" class="table-icon edit" title="Sửa"></a>
+							<a href="javascript:void(0);" onclick="if(confirm('Bạn có chắc xóa thành viên này?')) location.href='dashboard.php?type=user&action=delete&idtaikhoan=<?php echo $row['idtaikhoan']; ?>';" class="table-icon delete" title="Xóa"></a>
 						</td>
 					</tr>
 					<?php
