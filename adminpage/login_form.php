@@ -42,6 +42,7 @@
   </p>
   </div>
   <p class="p-container">
-    <input type="submit" name="login" id="go" value="Đăng nhập">
+      <a href="../index.php"><input type="button" name="cancel" class="go" value="Thoát"></a>
+      <input type="submit" name="login" class="go" value="Đăng nhập">
   </p>
 </form>

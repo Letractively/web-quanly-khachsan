@@ -6,7 +6,7 @@ if (!$db) {
     exit();
     
 }
-mysql_select_db("quanlykhachsan");
+mysql_select_db("qlks");
 require_once '../Views/KhachHangView.php';
 ?>
 <div id="bookingform">
