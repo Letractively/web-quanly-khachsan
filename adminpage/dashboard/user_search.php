@@ -1,3 +1,8 @@
+<?php
+	if(!user_can($idtaikhoan, "delete_user")||!user_can($idtaikhoan,"update_user")){
+		header("location:dashboard.php");
+}
+?>
 <div class="full_w">
 	<div class="h_title">Tìm kiếm thành viên</div>
 	<div class="entry">

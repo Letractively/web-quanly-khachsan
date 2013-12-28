@@ -1,3 +1,8 @@
+<?php
+	if(!user_can($idtaikhoan, "manage_role")){
+		header("location:dashboard.php");
+}
+?>
 <div class="full_w">
 	<div class="h_title">Cập nhật vai trò</div>
 	<div class="entry">

@@ -1,5 +1,10 @@
+<?php
+	if(!user_can($idtaikhoan, "manage_roomtype")){
+		header("location:dashboard.php");
+}
+?>
 <div class="full_w">
-	<div class="h_title">Danh sách loại phòng</div>
+	<div class="h_title">Tìm kiếm loại phòng</div>
 	<div class="entry">
 		<div class="sep">
 			<table>

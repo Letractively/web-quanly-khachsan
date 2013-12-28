@@ -1,3 +1,9 @@
+<?php
+	if(!user_can($idtaikhoan, "manage_room")){
+		header("location:dashboard.php");
+	}
+?>
+
 <?php 
 	if(!$_GET['idphong']){
 		header("location: dashboard.php?type=room&action=all");

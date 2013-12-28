@@ -1,3 +1,8 @@
+<?php
+	if(!user_can($idtaikhoan, "manage_service")){
+		header("location:dashboard.php");
+}
+?>
 <?php 
 	if(!$_GET['iddichvu']){
 		header("location: dashboard.php?type=service&action=all");

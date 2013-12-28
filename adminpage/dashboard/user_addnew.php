@@ -1,3 +1,8 @@
+<?php
+	if(!user_can($idtaikhoan, "addnew_user")){
+		header("location:dashboard.php");
+}
+?>
 <?php 
 	if(user_can($idtaikhoan, "addnew_user")&&user_can($idtaikhoan, "delete_user")){
 		?>

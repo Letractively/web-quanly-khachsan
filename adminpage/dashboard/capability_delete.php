@@ -1,5 +1,5 @@
 <?php 
-	if(user_can($idtaikhoan, "manage_capability")==FALSE)	
+	if(user_can($idtaikhoan, "manage_capability")==FALSE){
 		header("location:dashboard.php");
 	} else {
 		if(!$_GET['idquyen']){
