@@ -23,16 +23,16 @@
 						}
 						//=================================================
 						if(isset($_POST['update'])){
-							$tenvaitro = $_POST['tenvaitro'];
+							//$tenvaitro = $_POST['tenvaitro'];
 							$ghichu = $_POST['ghichu'];
-							if($tenvaitro == ""){
-								echo "<span style='color:red;'>Lỗi: Tên vai trò không được trống.</span>";
-							}else{
-									if(role_exists($tenvaitro)){
-									echo "<span style='color:red;'>Lỗi: Tên vai trò đã tồn tại.</span>";}
-									else{
+							//if($tenvaitro == ""){
+								//echo "<span style='color:red;'>Lỗi: Tên vai trò không được trống.</span>";
+							//}else{
+									//if(role_exists($tenvaitro)){
+									//echo "<span style='color:red;'>Lỗi: Tên vai trò đã tồn tại.</span>";}
+										{
 										if(isset($_POST['cap'])){
-									$qr = "update vaitro set tenvaitro = '$tenvaitro', quyen = '".serialize($_POST['cap'])."', ghichu = '$ghichu' where idvaitro = '$idvaitro'";
+									$qr = "update vaitro set quyen = '".serialize($_POST['cap'])."', ghichu = '$ghichu' where idvaitro = '$idvaitro'";
 								}else{
 									$qr = "update vaitro set tenvaitro = '$tenvaitro', quyen = '".serialize($_POST['cap'])."', ghichu = '$ghichu' where idvaitro = '$idvaitro'";
 								}
@@ -44,7 +44,7 @@
 									}
 								
 							}
-						}
+						
 					?>
 				</td>
 			</tr>
@@ -53,7 +53,7 @@
 					<label  for="tenvaitro">Tên vai trò</label>
 				</td>
 				<td>
-					<input value="<?php echo $role['tenvaitro']; ?>" type="text" autocomplete="off" name="tenvaitro" id="tenvaitro" size="30">
+					<input disabled value="<?php echo $role['tenvaitro']; ?>" type="text" autocomplete="off" name="tenvaitro" id="tenvaitro" size="30">
 				</td>
 			</tr>
 			<tr>

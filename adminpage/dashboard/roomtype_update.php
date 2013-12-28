@@ -50,7 +50,7 @@
 					<label for="loaiphong">Loại phòng</label>
 				</td>
 				<td>
-					<input value="<?php echo $cap['loaiphong']; ?>" type="text" autocomplete="off" name="loaiphong" id="loaiphong" size="30">
+					<input disabled value="<?php echo $cap['loaiphong']; ?>" type="text" autocomplete="off" name="loaiphong" id="loaiphong" size="30">
 				</td>
 			</tr>
 			<tr>

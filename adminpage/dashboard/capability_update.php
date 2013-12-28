@@ -23,24 +23,24 @@
 						}
 						//=================================================
 						if(isset($_POST['update'])){
-							$tenquyen = $_POST['tenquyen'];
+							//$tenquyen = $_POST['tenquyen'];
 							$tenhienthi = $_POST['tenhienthi'];
 							$ghichu = $_POST['ghichu'];
-							if($tenquyen == ""){
-								echo "<span style='color:red;'>Lỗi: Tên quyền không được trống.</span>";
-							}else{
-								if(capability_exists($tenquyen)){
-									echo "<span style='color:red;'>Lỗi: Tên quyền đã tồn tại.</span>";
-								}else{
+							//if($tenquyen == ""){
+								//echo "<span style='color:red;'>Lỗi: Tên quyền không được trống.</span>";
+							//}else{
+								//if(capability_exists($tenquyen)){
+									//echo "<span style='color:red;'>Lỗi: Tên quyền đã tồn tại.</span>";
+								//}else{
 									$cnn = DB::StaticConnect();
-									$rs = DB::ExecuteQuery("update quyen set tenquyen = '$tenquyen', tenhienthi = '$tenhienthi',ghichu = '$ghichu' where idquyen = '$idquyen'", $cnn);
+									$rs = DB::ExecuteQuery("update quyen set tenhienthi = '$tenhienthi',ghichu = '$ghichu' where idquyen = '$idquyen'", $cnn);
 									if($rs){
 										echo "<script>alert('Cập nhật quyền thành công'); location.href='dashboard.php?type=capability&action=all';</script>";
 									}
 								}
 								
-							}
-						}
+			
+						
 					?>
 				</td>
 			</tr>
@@ -49,7 +49,7 @@
 					<label for="tenquyen">Tên quyền</label>
 				</td>
 				<td>
-					<input value="<?php echo $cap['tenquyen']; ?>" type="text" autocomplete="off" name="tenquyen" id="tenquyen" size="40">
+					<input disabled value="<?php echo $cap['tenquyen']; ?>" type="text" autocomplete="off" name="tenquyen" id="tenquyen" size="40">
 				</td>
 			</tr>
 			<tr>
