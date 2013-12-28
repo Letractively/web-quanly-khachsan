@@ -8,6 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="css/navi.css" media="screen" />
 	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jqueryEasing.js"></script>
+        <script type="text/javascript" src="js/jqueryUI.js"></script>
 </head>
 <body>
 
@@ -39,15 +43,15 @@
 						<?php 
 							if(user_can($user_id, "update_user")&&user_can($user_id, "delete_user")){
 								?>
-								<li>&#8250; <a href="dashboard.php?type=user&action=all">Tất cả thành viên</a></li>
-								<li>&#8250; <a href="dashboard.php?type=user&action=search">Tìm kiếm thành viên</a></li>
+								<li> <a href="dashboard.php?type=user&action=all">Tất cả thành viên</a></li>
+								<li> <a href="dashboard.php?type=user&action=search">Tìm kiếm thành viên</a></li>
 								<?php
 							}
 						?>
 						<?php 
 							if(user_can($user_id, "addnew_user")){
 								?>
-								<li>&#8250; <a href="dashboard.php?type=user&action=addnew">Thêm mới thành viên</a></li>
+								<li> <a href="dashboard.php?type=user&action=addnew">Thêm mới thành viên</a></li>
 								<?php
 							}
 						?>
@@ -58,9 +62,9 @@
 								?>
 								<li class="upp"><a href="dashboard.php?type=user">Quản lý quyền</a>
 					<ul>
-						<li>&#8250; <a href="dashboard.php?type=capability&action=all">Tất cả các quyền</a></li>
-						<li>&#8250; <a href="dashboard.php?type=capability&action=search">Tìm kiếm quyền</a></li>
-						<li>&#8250; <a href="dashboard.php?type=capability&action=addnew">Thêm mới quyền</a></li>
+						<li> <a href="dashboard.php?type=capability&action=all">Tất cả các quyền</a></li>
+						<li> <a href="dashboard.php?type=capability&action=search">Tìm kiếm quyền</a></li>
+						<li> <a href="dashboard.php?type=capability&action=addnew">Thêm mới quyền</a></li>
 					</ul>
 				</li>
 								<?php
@@ -72,9 +76,9 @@
 								?>
 				<li class="upp"><a href="dashboard.php?type=role">Quản lý vai trò</a>
 					<ul>
-						<li>&#8250; <a href="dashboard.php?type=role&action=all">Tất cả vai trò</a></li>
-						<li>&#8250; <a href="dashboard.php?type=role&action=search">Tìm kiếm vai trò</a></li>
-						<li>&#8250; <a href="dashboard.php?type=role&action=addnew">Thêm mới vai trò</a></li>
+						<li> <a href="dashboard.php?type=role&action=all">Tất cả vai trò</a></li>
+						<li> <a href="dashboard.php?type=role&action=search">Tìm kiếm vai trò</a></li>
+						<li> <a href="dashboard.php?type=role&action=addnew">Thêm mới vai trò</a></li>
 					</ul>
 				</li>
 								<?php
@@ -85,9 +89,9 @@
 								?>
 				<li class="upp"><a href="dashboard.php?type=room">Quản lý phòng</a>
 					<ul>
-						<li>&#8250; <a href="dashboard.php?type=room&action=all">Tất cả phòng</a></li>
-						<li>&#8250; <a href="dashboard.php?type=room&action=search">Tìm kiếm phòng</a></li>
-						<li>&#8250; <a href="dashboard.php?type=room&action=addnew">Thêm mới phòng</a></li>
+						<li> <a href="dashboard.php?type=room&action=all">Tất cả phòng</a></li>
+						<li> <a href="dashboard.php?type=room&action=search">Tìm kiếm phòng</a></li>
+						<li> <a href="dashboard.php?type=room&action=addnew">Thêm mới phòng</a></li>
 					</ul>
 				</li>
 								<?php
@@ -98,9 +102,9 @@
 								?>
 				<li class="upp"><a href="dashboard.php?type=roomtype">Quản lý loại phòng</a>
 					<ul>
-						<li>&#8250; <a href="dashboard.php?type=roomtype&action=all">Tất cả loại phòng</a></li>
-						<li>&#8250; <a href="dashboard.php?type=roomtype&action=search">Tìm kiếm loại phòng</a></li>
-						<li>&#8250; <a href="dashboard.php?type=roomtype&action=addnew">Thêm mới loại phòng</a></li>
+						<li> <a href="dashboard.php?type=roomtype&action=all">Tất cả loại phòng</a></li>
+						<li> <a href="dashboard.php?type=roomtype&action=search">Tìm kiếm loại phòng</a></li>
+						<li> <a href="dashboard.php?type=roomtype&action=addnew">Thêm mới loại phòng</a></li>
 					</ul>
 				</li>
 								<?php
@@ -111,9 +115,9 @@
 								?>
 				<li class="upp"><a href="dashboard.php?type=service">Quản lý dịch vụ</a>
 					<ul>
-						<li>&#8250; <a href="dashboard.php?type=service&action=all">Tất cả dịch vụ</a></li>
-						<li>&#8250; <a href="dashboard.php?type=service&action=search">Tìm kiếm dịch vụ</a></li>
-						<li>&#8250; <a href="dashboard.php?type=service&action=addnew">Thêm mới dịch vụ</a></li>
+						<li> <a href="dashboard.php?type=service&action=all">Tất cả dịch vụ</a></li>
+						<li> <a href="dashboard.php?type=service&action=search">Tìm kiếm dịch vụ</a></li>
+						<li> <a href="dashboard.php?type=service&action=addnew">Thêm mới dịch vụ</a></li>
 					</ul>
 				</li>
 								<?php
@@ -125,108 +129,127 @@
 	
 	<div id="content">
 		<div id="sidebar">
-			<div class="box">
-				<div class="h_title">&#8250; Quản lý thành viên</div>				
+			<ul class="box">
+                            <li > <a href="#">Quản lý thành viên</a>				
 				<ul>
 					<?php 
 							if(user_can($user_id, "update_user")&&user_can($user_id, "delete_user")){
 								?>
-								<li class="b1"><a class="icon users" href="dashboard.php?type=user&action=all">Tất cả thành viên</a></li>
-								<li class="b1"><a class="icon users" href="dashboard.php?type=user&action=search">Tìm kiếm thành viên</a></li>
+								<li ><a class="icon users" href="dashboard.php?type=user&action=all">Tất cả thành viên</a></li>
+								<li ><a class="icon users" href="dashboard.php?type=user&action=search">Tìm kiếm thành viên</a></li>
 								<?php
 							}
 						?>
 						<?php 
 							if(user_can($user_id, "addnew_user")){
 								?>
-								<li class="b2"><a class="icon add_user" href="dashboard.php?type=user&action=addnew">Thêm mới thành viên</a></li>
+								<li ><a class="icon add_user" href="dashboard.php?type=user&action=addnew">Thêm mới thành viên</a></li>
 								<?php
 							}
 						?>					
 					
 				</ul>
-			</div>
+                            </li>
 				
-			<div class="box">
-				<div class="h_title">&#8250; Quản lý quyền</div>
+			
+                            <li > <a href="#">Quản lý quyền</a>
 				<ul>
 					<?php 
 							if(user_can($user_id, "manage_capability")){
 								?>
-								<li class="b1"><a class="icon category" href="dashboard.php?type=capability&action=all">Tất cả các quyền</a></li>
-								<li class="b1"><a class="icon category" href="dashboard.php?type=capability&action=search">Tìm kiếm quyên</a></li>
-								<li class="b2"><a class="icon add_page" href="dashboard.php?type=capability&action=addnew">Thêm mới quyền</a></li>
+								<li ><a class="icon category" href="dashboard.php?type=capability&action=all">Tất cả các quyền</a></li>
+								<li ><a class="icon category" href="dashboard.php?type=capability&action=search">Tìm kiếm quyên</a></li>
+								<li ><a class="icon add_page" href="dashboard.php?type=capability&action=addnew">Thêm mới quyền</a></li>
 								
 								<?php
 							}
 						?>
 					
 				</ul>
-			</div>
-			<div class="box">
-				<div class="h_title">&#8250; Quản lý vai trò</div>
+                            </li>
+                            <li ><a href="#">Quản lý vai trò</a>
 				
 				<ul>
 						<?php 
 							if(user_can($user_id, "manage_role")){
 								?>
-								<li class="b1"><a class="icon category" href="dashboard.php?type=role&action=all">Tất cả vai trò</a></li>
-								<li class="b1"><a class="icon category" href="dashboard.php?type=role&action=search">Tìm kiếm vai trò</a></li>
-								<li class="b2"><a class="icon add_page" href="dashboard.php?type=role&action=addnew">Thêm mới vai trò</a></li>
+								<li ><a class="icon category" href="dashboard.php?type=role&action=all">Tất cả vai trò</a></li>
+								<li ><a class="icon category" href="dashboard.php?type=role&action=search">Tìm kiếm vai trò</a></li>
+								<li ><a class="icon add_page" href="dashboard.php?type=role&action=addnew">Thêm mới vai trò</a></li>
 								
 								<?php
 							}
 						?>
 					
 				</ul>
-			</div>
-			<div class="box">
-				<div class="h_title">&#8250; Quản lý phòng</div>
+                            </li>
+                            <li > <a href="#">Quản lý phòng</a>
 				<ul>
 					<?php 
 							if(user_can($user_id, "manage_room")){
 								?>
-								<li class="b1"><a class="icon category" href="dashboard.php?type=room&action=all">Tất cả các phòng</a></li>
-								<li class="b1"><a class="icon category" href="dashboard.php?type=room&action=search">Tìm kiếm phòng</a></li>
-								<li class="b2"><a class="icon add_page" href="dashboard.php?type=room&action=addnew">Thêm mới phòng</a></li>
+								<li ><a class="icon category" href="dashboard.php?type=room&action=all">Tất cả các phòng</a></li>
+								<li ><a class="icon category" href="dashboard.php?type=room&action=search">Tìm kiếm phòng</a></li>
+								<li ><a class="icon add_page" href="dashboard.php?type=room&action=addnew">Thêm mới phòng</a></li>
 								
 								<?php
 							}
 						?>
 					
 				</ul>
-			</div>
-			<div class="box">
-				<div class="h_title">&#8250; Quản lý loại phòng</div>
+                            </li>
+                            <li > <a href="#">Quản lý loại phòng</a>
 				<ul>
 					<?php 
 							if(user_can($user_id, "manage_roomtype")){
 								?>
-								<li class="b1"><a class="icon category" href="dashboard.php?type=roomtype&action=all">Tất cả loại phòng</a></li>
-								<li class="b1"><a class="icon category" href="dashboard.php?type=roomtype&action=search">Tìm kiếm loại phòng</a></li>
-								<li class="b2"><a class="icon add_page" href="dashboard.php?type=roomtype&action=addnew">Thêm mới loại phòng</a></li>
+								<li ><a class="icon category" href="dashboard.php?type=roomtype&action=all">Tất cả loại phòng</a></li>
+								<li ><a class="icon category" href="dashboard.php?type=roomtype&action=search">Tìm kiếm loại phòng</a></li>
+								<li ><a class="icon add_page" href="dashboard.php?type=roomtype&action=addnew">Thêm mới loại phòng</a></li>
 								
 								<?php
 							}
 						?>
 					
 				</ul>
-			</div>
-			<div class="box">
-				<div class="h_title">&#8250; Quản lý dịch vụ</div>
+                            </li>
+				<li> <a href="#">Quản lý dịch vụ</a>
 				<ul>
 					<?php 
 							if(user_can($user_id, "manage_service")){
 								?>
-								<li class="b1"><a class="icon category" href="dashboard.php?type=service&action=all">Tất cả dịch vụ</a></li>
-								<li class="b1"><a class="icon category" href="dashboard.php?type=service&action=search">Tìm kiếm dịch vụ</a></li>
-								<li class="b2"><a class="icon add_page" href="dashboard.php?type=service&action=addnew">Thêm mới dịch vụ</a></li>
+								<li><a class="icon category" href="dashboard.php?type=service&action=all">Tất cả dịch vụ</a></li>
+								<li><a class="icon category" href="dashboard.php?type=service&action=search">Tìm kiếm dịch vụ</a></li>
+								<li><a class="icon add_page" href="dashboard.php?type=service&action=addnew">Thêm mới dịch vụ</a></li>
 								
 								<?php
 							}
 						?>
 					
 				</ul>
+                                </li>
+                        </ul>
+                    <script>
+
+(function($){
+	$('.box > li').find('ul').each(function(){
+		$(this).parent().addClass('lv2');
+	})
+
+	$('.lv2 > a').click(function(e){
+		e.preventDefault();
+		el = $(this);
+		if(!el.hasClass('on')){
+			$('.on').removeClass('on').next().stop(false,true).slideUp(400);
+			el.addClass('on').next().stop(false,true).slideDown(400);
+		}else{
+			$('.on').removeClass('on').next().stop(false,true).slideUp(400);
+		}
+	})
+
+})(jQuery);
+
+</script>
 			</div>
 		</div>
 		<div id="main">
