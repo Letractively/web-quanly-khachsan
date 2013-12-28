@@ -20,16 +20,16 @@
 				if(isset($_POST['search'])){
 					$s = $_POST['s'];
 					$cnn2 = DB::StaticConnect();
-					$rs2 = DB::ExecuteQuery("select * from role where role_name like '%$s%'", $cnn2);
+					$rs2 = DB::ExecuteQuery("select * from vaitro where tenvaitro like '%$s%'", $cnn2);
 					while($role = mysql_fetch_assoc($rs2)){
 					?>
 					<tr>
-						<td><?php echo $role['role_id']; ?></td>
-						<td><?php echo $role['role_name']; ?></td>
-						<td><?php echo $role['note']; ?></td>
+						<td><?php echo $role['idvaitro']; ?></td>
+						<td><?php echo $role['tenvaitro']; ?></td>
+						<td><?php echo $role['ghichu']; ?></td>
 						<td style="width:50px;">
-							<a title="Sửa" class="table-icon edit" href="dashboard.php?type=role&action=update&role_id=<?php echo $role['role_id']; ?>"></a>
-							<a title="Xóa" class="table-icon delete" href="javascript:void(0);" onclick="if(confirm('Bạn có chắc chắc xóa vai trò này không?')) location.href='dashboard.php?type=role&action=delete&role_id=<?php echo $role['role_id']; ?>';"></a>
+							<a title="Sửa" class="table-icon edit" href="dashboard.php?type=role&action=update&idvaitro=<?php echo $role['role_id']; ?>"></a>
+							<a title="Xóa" class="table-icon delete" href="javascript:void(0);" onclick="if(confirm('Bạn có chắc chắc xóa vai trò này không?')) location.href='dashboard.php?type=role&action=delete&idvaitro=<?php echo $role['idvaitro']; ?>';"></a>
 						</td>
 					</tr>
 					<?php 

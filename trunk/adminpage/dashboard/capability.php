@@ -15,22 +15,22 @@
 		<?php
 			$paged = 1; 
 			if(isset($_GET['paged'])) $paged = $_GET['paged'];
-			$showposts = 5;
+			$showposts = 8;
 			$begin = ($paged - 1) * $showposts; 
 			$cnn = DB::StaticConnect();
-			$rs = DB::ExecuteQuery("select * from capability limit $begin, $showposts ", $cnn);
+			$rs = DB::ExecuteQuery("select * from quyen limit $begin, $showposts ", $cnn);
 			$cnn2 = DB::StaticConnect();
-			$rs2 = DB::ExecuteQuery("select * from capability", $cnn2);
+			$rs2 = DB::ExecuteQuery("select * from quyen", $cnn2);
 			while($cap = mysql_fetch_assoc($rs)){
 				?>
 				<tr>
-					<td><?php echo $cap['capability_id']; ?></td>
-					<td><?php echo $cap['capability_name']; ?></td>
-					<td><?php echo $cap['capability_label']; ?></td>
-					<td><?php echo $cap['note']; ?></td>
+					<td><?php echo $cap['idquyen']; ?></td>
+					<td><?php echo $cap['tenquyen']; ?></td>
+					<td><?php echo $cap['tenhienthi']; ?></td>
+					<td><?php echo $cap['ghichu']; ?></td>
 					<td style="width:50px;">
-						<a title="Sửa" class="table-icon edit" href="dashboard.php?type=capability&action=update&capability_id=<?php echo $cap['capability_id']; ?>"></a>
-						<a title="Xóa" class="table-icon delete" href="javascript:void(0);" onclick="if(confirm('Bạn có chắc chắc xóa quyền này không?')) location.href='dashboard.php?type=capability&action=delete&capability_id=<?php echo $cap['capability_id']; ?>';"></a>
+						<a title="Sửa" class="table-icon edit" href="dashboard.php?type=capability&action=update&idquyen=<?php echo $cap['idquyen']; ?>"></a>
+						<a title="Xóa" class="table-icon delete" href="javascript:void(0);" onclick="if(confirm('Bạn có chắc chắc xóa quyền này không?')) location.href='dashboard.php?type=capability&action=delete&idquyen=<?php echo $cap['idquyen']; ?>';"></a>
 					</td>
 				</tr>
 				<?php 

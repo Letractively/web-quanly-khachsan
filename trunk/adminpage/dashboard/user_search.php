@@ -24,17 +24,17 @@
 				if(isset($_POST['search'])){
 					$s = $_POST['s'];
 					$cnn2 = DB::StaticConnect();
-					$rs2 = DB::ExecuteQuery("select * from user where user_name like '%$s%'", $cnn2);
+					$rs2 = DB::ExecuteQuery("select * from taikhoan where tentk like '%$s%'", $cnn2);
 					while($row = mysql_fetch_assoc($rs2)){
 					?>
 					<tr>
-						<td class="align-center"><?php echo $row['user_id']; ?></td>
-						<td><?php echo $row['user_name']; ?></td>
-						<td><?php echo date("d/m/Y H:i:s", strtotime($row['date_create'])); ?></td>
-						<td><?php echo $row['note'] ?></td>
+						<td class="align-center"><?php echo $row['idtaikhoan']; ?></td>
+						<td><?php echo $row['tentk']; ?></td>
+						<td><?php echo date("d/m/Y H:i:s", strtotime($row['ngaytao'])); ?></td>
+						<td><?php echo $row['ghichu'] ?></td>
 						<td>
-							<a href="dashboard.php?type=user&action=update&user_id=<?php echo $row['user_id']; ?>" class="table-icon edit" title="Sửa"></a>
-							<a href="javascript:void(0);" onclick="if(confirm('Bạn có chắc xóa thành viên này?')) location.href='dashboard.php?type=user&action=delete&user_id=<?php echo $row['user_id']; ?>';" class="table-icon delete" title="Xóa"></a>
+							<a href="dashboard.php?type=user&action=update&idtaikhoan=<?php echo $row['idtaikhoan']; ?>" class="table-icon edit" title="Sửa"></a>
+							<a href="javascript:void(0);" onclick="if(confirm('Bạn có chắc xóa thành viên này?')) location.href='dashboard.php?type=user&action=delete&idtaikhoan=<?php echo $row['idtaikhoan']; ?>';" class="table-icon delete" title="Xóa"></a>
 						</td>
 					</tr>
 					<?php
