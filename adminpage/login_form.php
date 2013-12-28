@@ -9,17 +9,17 @@
         }
         if(isset($_POST['login'])){
             $cnn = DB::StaticConnect();
-            $rs = DB::ExecuteQuery("select user_name, role, user_id, status from user where user_name = '".$_POST['username']."' and password = '".md5($_POST['password'])."'", $cnn);
+            $rs = DB::ExecuteQuery("select tentk, vaitro, idtaikhoan, tinhtrang from taikhoan where tentk = '".$_POST['tentk']."' and matkhau = '".md5($_POST['matkhau'])."'", $cnn);
             if(mysql_num_rows($rs) > 0){
-                $user = mysql_fetch_assoc($rs); 
+                $taikhoan = mysql_fetch_assoc($rs); 
                 $cnn2 = DB::StaticConnect();
-                $rs2 = DB::ExecuteQuery("select capability from role where role_id = '".$user['role']."'", $cnn2);
+                $rs2 = DB::ExecuteQuery("select quyen from vaitro where idvaitro = '".$taikhoan['vaitro']."'", $cnn2);
                 $role = mysql_fetch_assoc($rs);
-                $_SESSION['authentication']['user_id'] = $user['user_id'];
-                $_SESSION['authentication']['user_name'] = $user['user_name'];
-                $_SESSION['authentication']['role'] = $role['capability'];
+                $_SESSION['authentication']['idtaikhoan'] = $taikhoan['idtaikhoan'];
+                $_SESSION['authentication']['tentk'] = $taikhoan['tentk'];
+                $_SESSION['authentication']['vaitro'] = $role['quyen'];
                 
-                if($user['status'] == 0){
+                if($taikhoan['tinhtrang'] == 0){
                     echo "Tài khoản của bạn đã bị khóa.";
 						
                 }
@@ -34,11 +34,11 @@
   </p><br/></br/>
   <p>
     <label for="email">Tên đăng nhập</label>
-    <input autofocus autocomplete="off" require type="text" name="username" id="username">
+    <input autofocus autocomplete="off" require type="text" name="tentk" id="tentk">
   </p>
   <p>
     <label for="password">Mật khẩu</label>
-    <input autocomplete="off" require type="password" name="password" id="password">
+    <input autocomplete="off" require type="password" name="matkhau" id="matkhau">
   </p>
   </div>
   <p class="p-container">
