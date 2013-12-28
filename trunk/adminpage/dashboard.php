@@ -350,11 +350,11 @@
 		<div class="clear"></div>
 	</div>
 
-	<div id="footer">
+    <footer id="footer">
 		<div class="left">
-			<p style="margin-left: 250px; color: while;">© 2013 XuanHongHotel.com.vn - Khách sạn Xuân Hồng Đà Lạt</p>
+			<p>© 2013 XuanHongHotel.com.vn - Khách sạn Xuân Hồng Đà Lạt</p>
 		</div>
-	</div>
+    </footer>
 </div>
 </body>
 </html>
