@@ -6,7 +6,7 @@ if (!$db) {
     exit();
     
 }
-mysql_select_db("qlks");
+mysql_select_db("quanlykhachsan");
 ?>
 <fieldset id="addcustomer-add">
     <legend>Thêm khách hàng</legend>

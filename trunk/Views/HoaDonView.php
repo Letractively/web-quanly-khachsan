@@ -7,7 +7,7 @@ if (!$db) {
     exit();
     
 }
-mysql_select_db("qlks");
+mysql_select_db("quanlykhachsan");
 
 ?>
 <html>
