@@ -13,7 +13,7 @@ class DB
     static function StaticConnect()
     {
         $cnn = mysql_connect('localhost','root','') or die ('Không kết nối được tới server: localhost ');
-        mysql_select_db('QLKS', $cnn) or die('Không kết nối được đến database: quanlykhachsan');
+        mysql_select_db('quanlykhachsan', $cnn) or die('Không kết nối được đến database: quanlykhachsan');
         mysql_query("set names 'utf8'");
         return $cnn;
     }
@@ -37,7 +37,7 @@ class DB
 //kiem tra quyen da ton tai chua
 function capability_exists($capability_name){
     $cnn = DB::StaticConnect();
-    $rs = DB::ExecuteQuery("select capability_id from capability where capability_name = '$capability_name'", $cnn);
+    $rs = DB::ExecuteQuery("select idquyen from quyen where tenquyen = '$capability_name'", $cnn);
     if(mysql_num_rows($rs) > 0){
         return true;
     }
@@ -46,24 +46,24 @@ function capability_exists($capability_name){
 //kiem tra ten dang nhap ton tai chua
 function username_exists($username){
     $cnn = DB::StaticConnect();
-    $rs = DB::ExecuteQuery("select user_name from user where user_name = '$username'", $cnn);
+    $rs = DB::ExecuteQuery("select tentk from taikhoan where tentk = '$username'", $cnn);
     if(mysql_num_rows($rs) > 0) return true;
     return false;
 } 
 //kiem tra user co quyen gi??
-function user_can($user_id, $cap){
+function user_can($idtaikhoan, $cap){
     $cnn = DB::StaticConnect();
-    $rs = DB::ExecuteQuery("select role from user where user_id = '$user_id'", $cnn);
+    $rs = DB::ExecuteQuery("select vaitro from taikhoan where idtaikhoan = '$idtaikhoan'", $cnn);
     $urole = mysql_fetch_assoc($rs); 
     $cnn2 = DB::StaticConnect();
-    $rs2 = DB::ExecuteQuery("select capability from role where role_id = '".$urole['role']."'", $cnn2);
+    $rs2 = DB::ExecuteQuery("select quyen from vaitro where idvaitro = '".$urole['vaitro']."'", $cnn2);
     $role = mysql_fetch_assoc($rs2); 
-    if($role['capability'] == "") return false;
-    $caps = unserialize($role['capability']);
+    if($role['quyen'] == "") return false;
+    $caps = unserialize($role['quyen']);
     //====
     $cnn3 = DB::StaticConnect();
-    $rs3 = DB::ExecuteQuery("select capability_id from capability where capability_name = '$cap'",$cnn3);
-    $c = mysql_fetch_assoc($rs3); $ucap = $c['capability_id'];
+    $rs3 = DB::ExecuteQuery("select idquyen from quyen where tenquyen = '$cap'",$cnn3);
+    $c = mysql_fetch_assoc($rs3); $ucap = $c['idquyen'];
     if(in_array($ucap, $caps)) return true;
     return false;
 }
@@ -78,7 +78,7 @@ function room_exists($room_name){
 //kiem tra vai tro ton tai hay chua
 function role_exists($role_name){
 	$cnn = DB::StaticConnect();
-    $rs = DB::ExecuteQuery("select role_name from role where role_name = '$role_name'", $cnn);
+    $rs = DB::ExecuteQuery("select tenvaitro from vaitro where tenvaitro = '$role_name'", $cnn);
     if(mysql_num_rows($rs) > 0) return true;
     return false;
 }
