@@ -37,7 +37,7 @@
 			<ul>
                             <li class="upp"> <a href="../index.php">Trang Chủ</a>
 				</li>
-				<li class="upp"><a href="#">Quản lý thành viên</a>
+				<li class="upp"><a href="#">QL Thành Viên</a>
 					<ul>
 						
 						<?php 
@@ -60,7 +60,7 @@
 						<?php 
 							if(user_can($idtaikhoan, "manage_capability")){
 								?>
-								<li class="upp"><a href="dashboard.php?type=user">Quản lý quyền</a>
+								<li class="upp"><a href="dashboard.php?type=user">QL Quyền</a>
 					<ul>
 						<li> <a href="dashboard.php?type=capability&action=all">Tất cả các quyền</a></li>
 						<li> <a href="dashboard.php?type=capability&action=search">Tìm kiếm quyền</a></li>
@@ -74,7 +74,7 @@
 				<?php 
 							if(user_can($idtaikhoan, "manage_role")){
 								?>
-				<li class="upp"><a href="dashboard.php?type=role">Quản lý vai trò</a>
+				<li class="upp"><a href="dashboard.php?type=role">QL Vai Trò</a>
 					<ul>
 						<li> <a href="dashboard.php?type=role&action=all">Tất cả vai trò</a></li>
 						<li> <a href="dashboard.php?type=role&action=search">Tìm kiếm vai trò</a></li>
@@ -87,7 +87,7 @@
 				<?php 
 							if(user_can($idtaikhoan, "manage_room")){
 								?>
-				<li class="upp"><a href="dashboard.php?type=room">Quản lý phòng</a>
+				<li class="upp"><a href="dashboard.php?type=room">QL Phòng</a>
 					<ul>
 						<li> <a href="dashboard.php?type=room&action=all">Tất cả phòng</a></li>
 						<li> <a href="dashboard.php?type=room&action=search">Tìm kiếm phòng</a></li>
@@ -100,7 +100,7 @@
 						<?php 
 							if(user_can($idtaikhoan, "manage_room")){
 								?>
-				<li class="upp"><a href="dashboard.php?type=roomlease">Quản lý thuê phòng</a>
+				<li class="upp"><a href="dashboard.php?type=roomlease">QL Thuê Phòng</a>
 					<ul>
 						<li class="upp"> <a href="dashboard.php?type=roomlease&action=all">Tất cả thuê phòng</a></li>
 						<li class="upp"> <a href="dashboard.php?type=roomlease&action=search">Tìm kiếm phòng cho thuê</a></li>
@@ -113,7 +113,7 @@
 				<?php 
 							if(user_can($idtaikhoan, "manage_roomtype")){
 								?>
-				<li class="upp"><a href="dashboard.php?type=roomtype">Quản lý loại phòng</a>
+				<li class="upp"><a href="dashboard.php?type=roomtype">QL Loại Phòng</a>
 					<ul>
 						<li> <a href="dashboard.php?type=roomtype&action=all">Tất cả loại phòng</a></li>
 						<li> <a href="dashboard.php?type=roomtype&action=search">Tìm kiếm loại phòng</a></li>
@@ -126,7 +126,7 @@
 				<?php 
 							if(user_can($idtaikhoan, "manage_service")){
 								?>
-				<li class="upp"><a href="dashboard.php?type=service">Quản lý dịch vụ</a>
+				<li class="upp"><a href="dashboard.php?type=service">QL Dịch Vụ</a>
 					<ul>
 						<li> <a href="dashboard.php?type=service&action=all">Tất cả dịch vụ</a></li>
 						<li> <a href="dashboard.php?type=service&action=search">Tìm kiếm dịch vụ</a></li>
