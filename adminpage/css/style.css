@@ -83,6 +83,8 @@ button:hover, .button:hover{
 	float: left;
 	margin: 0 20px 0 0;
 	width: 190px;
+        height: auto;
+        max-height: 1200px;
 }
 #sidebar a{
 	color: #656565;
@@ -90,8 +92,101 @@ button:hover, .button:hover{
 
 #sidebar .box{
 	border: 1px solid #DCDDE1;
-	margin: 0 0 12px 0;
+        //border-top: solid 2px black;
+        border-bottom: solid 2px white;
+	margin: 70px 0 12px 5px;
+        float: left;
+        width: 200px;
+        background: black;
+        opacity: 0.8;
+        color: white;
+        font-weight: bold;
+        
 }
+
+
+//bonus
+#sidebar a{
+    color:white;
+	-moz-transition:background-color 0.2s ease,color 0.2s ease;
+	-webkit-transition:background-color 0.2s ease,color 0.2s ease;
+	-o-transition:background-color 0.2s ease,color 0.2s ease;
+	-ms-transition:background-color 0.2s ease,color 0.2s ease;
+	transition:background-color 0.2s ease,color 0.2s ease;
+}
+
+.box a{
+    display:block;
+    padding:5px 10px 10px 10px;
+    line-height: 20px;
+    
+}
+
+.box > li > a{
+    border-top:1px solid white;
+	position:relative;
+}
+
+.box > li:last-child > a{
+	border-bottom:1px solid #e1e1e1;
+}
+
+.box ul a{
+    padding-left:20px;
+}
+
+.box ul{
+    display:none;
+}
+
+.box > li > a:hover,.box .on{
+	background:white;
+        box-shadow: inset 0 0 30px black;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        color: gold;
+        //background: url(../img/bg_box_head.jpg) repeat-x;
+	
+	border-top-color:#fff;
+}
+
+.box ul a:hover{
+	background-color:gold;
+	color:gold;
+}
+
+.lv2 > a:before, .lv2 > a:after{
+	position:Absolute;
+	content:"";
+	background-color:white;
+        
+}
+
+.lv2 > a:before{
+    width:10px;
+    height:2px;
+    right:8px;
+    top:14px;
+}
+
+.lv2 > a:after{
+    width:2px;
+    height:10px;
+    right:12px;
+    top:10px;
+}
+
+.lv2 > .on:after{
+	display:none;
+}
+
+.lv2:hover a:after,.lv2:hover a:before,.lv2 .on:after,.lv2 .on:before{
+    background-color:black;
+    opacity: 0.8;
+}
+//
+
+
 #sidebar .box .h_title{
 	background: url(../img/bg_box_head.jpg) repeat-x;
 	color: #bebebe;
@@ -109,7 +204,7 @@ button:hover, .button:hover{
 #sidebar .box ul li{
 	padding: 8px 0 8px 5px;
 }
-.box ul li .icon{ padding: 2px 0 2px 22px;}
+.box ul li .icon{ padding: 2px 0 2px 40px;}
 .box ul li .page{ background: url(../img/i_page.png) no-repeat center left;}
 .box ul li .view_page{ background: url(../img/i_view_page.png) no-repeat center left;}
 .box ul li .category{ background: url(../img/i_category.png) no-repeat center left;}
