@@ -43,6 +43,6 @@
 	<div class="entry">
 		<?php dvd_pagging($paged, ceil(mysql_num_rows($rs2)/$showposts), "dashboard.php?type=user&action=all"); ?>
 		<div class="sep"></div>		
-		<a class="button add" href="dashboard.php?type=user&action=addnew">Thêm mới</a>
+                <a  href="dashboard.php?type=user&action=addnew"><input class="button" type="button" value="Thêm mới"></a>
 	</div>
 </div>

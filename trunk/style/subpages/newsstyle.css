@@ -37,3 +37,6 @@ and open the template in the editor.
     height: 10px;
     width: 610px;
 }
+#newspage a:hover{
+    color: gold;
+}

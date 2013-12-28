@@ -193,7 +193,7 @@ table {
 	display:none;
 }
 
-.login-bar{
+#login-bar{
     /*border-top:4px solid #222;*/
     position:relative;
 }
@@ -223,3 +223,5 @@ table {
     border: solid 2px gold;
     padding:6px 13px 6px 13px;
 }
+
+

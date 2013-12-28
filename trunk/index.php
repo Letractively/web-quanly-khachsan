@@ -53,10 +53,13 @@ require_once './include/mainpages/functions.php';
     <script type="text/javascript" lang="javascript" src="cript/scroll.js"></script>
     <script type="text/javascript" lang="javascript" src="cript/login.js"></script>
     </head>
-    <body>
-        <div class="login-bar">
+    <body onload="hide()">
+        <div id="login-bar" >
             <a href="adminpage/admin.php" class="login-button">Đăng Nhập</a>
 	</div>
+     
+       
+	
         <!--
         <div class="overlay"></div>
 	<form class="login">
@@ -120,8 +123,25 @@ require_once './include/mainpages/functions.php';
         ?>
         <div id="staticpanel">
     <?php
-    include_once './include/mainpages/staticpanel.php';
+            if (isset($_SESSION['authentication']))
+            {
+                include_once './include/mainpages/staticpanel.php';
+                ?>
+            
+            <script>
+     
+                    function hide(id) {
+			if(document.getElementById(login-bar).style.display != 'none'){
+				document.getElementById(login-bar).style.display = 'none';
+                            }};
+              
+                
+            </script>
+            <?php
+            }
+            
     ?>
+            
 </div>
 
         

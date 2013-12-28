@@ -40,6 +40,6 @@
 	<div class="entry">
 		<?php dvd_pagging($paged, ceil(mysql_num_rows($rs2)/$showposts), "dashboard.php?type=capability&action=all"); ?>
 		<div class="sep"></div>		
-		<a class="button add" href="dashboard.php?type=capability&action=addnew">Thêm mới</a>
+		<a class="add new" href="dashboard.php?type=capability&action=addnew">Thêm mới</a>
 	</div>
 </div>
