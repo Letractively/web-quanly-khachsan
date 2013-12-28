@@ -67,7 +67,7 @@
 			<td><textarea name="ghichu" cols="40" rows="5"></textarea></td>
 		</tr>
 		<tr>
-			<td colspan="2" style="text-align: left;"><input type="submit" name="addnew" class="button" value="Thêm"></td>
+			<td colspan="2" style="margin: auto; text-align: right;"><input type="submit" name="addnew" class="go" value="Thêm"></td>
 		</tr>
 		</form>
 	</table>

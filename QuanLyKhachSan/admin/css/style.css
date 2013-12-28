@@ -373,7 +373,10 @@ table .chb{
 
 .clear{ clear: both; }
 
-.left{ 	float: left; }
+.left{ 
+    margin: auto;
+    float: left; 
+}
 .right{ float: right; }
 
 .align-left{ text-align: left; }

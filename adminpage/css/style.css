@@ -238,9 +238,11 @@ button:hover, .button:hover{
 	color: #848484;
 	margin: 0 0 1px 0;
         float: left;
-        width: 680px;
+        width: 675px;
         height: auto;
-        max-height: 300px;
+        max-height: 800px;
+        min-height: 600px;
+
         
 }
 #main .full_w input[type="text"], #main .full_w input[type="password"]{background: #fff; border:1px solid #cecece; width:200px;}
@@ -454,10 +456,10 @@ table .chb{
 	border-top: 2px solid #404345;
 	color: #939393;
 	//float: left;
-	margin: 0 auto;
+	margin: auto;
 	padding: 0px 0px 0 50px;
 	text-shadow: #111111 0px 1px 1px;
-	width: 860px;
+	width: 825px;
         height: 30px;
         line-height: 30px;
         vertical-align: middle;
