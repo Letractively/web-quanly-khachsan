@@ -1,3 +1,8 @@
+<?php
+	if(!user_can($idtaikhoan, "update_user")){
+		header("location:dashboard.php");
+}
+?>
 <div class="full_w">
 	<div class="h_title">Cập nhật</div>
 	<div class="entry">

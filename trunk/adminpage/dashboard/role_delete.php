@@ -1,5 +1,10 @@
+<?php
+	if(!user_can($idtaikhoan, "manage_role")){
+		header("location:dashboard.php");
+}
+?>
+
 <?php 
-	if(user_can($idtaikhoan, "delete_user")){
 		if(!$_GET['idvaitro']){
 		header("location: dashboard.php?type=role&action=all");
 	}else{
@@ -11,9 +16,6 @@
 		}else{
 			echo "<script>alert('Xóa thất bại!'); location.href='dashboard.php?type=role&action=all';</script>";
 		}
-	}
-	} else {
-		header("location:dashboard.php");
 	}
 			
 ?>

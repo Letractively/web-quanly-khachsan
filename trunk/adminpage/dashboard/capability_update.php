@@ -1,3 +1,8 @@
+<?php
+	if(!user_can($idtaikhoan, "manage_capability")){
+		header("location:dashboard.php");
+}	
+?>
 <div class="full_w">
 	<div class="h_title">Cập nhật quyền</div>
 	<div class="entry">

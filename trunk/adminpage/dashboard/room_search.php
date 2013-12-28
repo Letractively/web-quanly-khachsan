@@ -1,5 +1,10 @@
+<?php
+	if(!user_can($idtaikhoan, "manage_room")){
+		header("location:dashboard.php");
+	}
+?>
 <div class="full_w">
-	<div class="h_title">Danh sách phòng</div>
+	<div class="h_title">Tim kiếm phòng</div>
 	<div class="entry">
 		<div class="sep">
 			<table>

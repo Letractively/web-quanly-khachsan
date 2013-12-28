@@ -1,5 +1,10 @@
+<?php
+	if(!user_can($idtaikhoan, "manage_service")){
+		header("location:dashboard.php");
+}
+?>
 <div class="full_w">
-	<div class="h_title">Danh sách dịch vụ</div>
+	<div class="h_title">Tìm kiếm dịch vụ</div>
 	<div class="entry">
 		<div class="sep">
 			<table>

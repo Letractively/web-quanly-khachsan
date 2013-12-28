@@ -1,3 +1,8 @@
+<?php
+	if(!user_can($idtaikhoan, "manage_room")){
+		header("location:dashboard.php");
+	}
+?>
 
 <div class="full_w">
 	<div class="h_title">Thêm phòng</div>

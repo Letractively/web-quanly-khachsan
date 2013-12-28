@@ -1,3 +1,8 @@
+<?php
+	if(!user_can($idtaikhoan, "delete_user")){
+		header("location:dashboard.php");
+}
+?>
 <?php 
 	if(user_can($idtaikhoan, "delete_user")){
 		if(!isset($_GET['idtaikhoan'])){header("location: dashboard.php?type=user&action=all");}
