@@ -4,9 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/wamp/www/web-quanly-khachsan/index.php</file>
-            <file>file:/C:/wamp/www/web-quanly-khachsan/adminpage/dashboard.php</file>
-            <file>file:/C:/wamp/www/web-quanly-khachsan/adminpage/css/style.css</file>
-            <file>file:/C:/wamp/www/web-quanly-khachsan/adminpage/css/navi.css</file>
+            <file>file:/C:/wamp/www/web-quanly-khachsan/adminpage/admin.php</file>
+            <file>file:/C:/wamp/www/web-quanly-khachsan/style/subpages/newsstyle.css</file>
+            <file>file:/C:/wamp/www/web-quanly-khachsan/include/subpages/news.php</file>
+            <file>file:/C:/wamp/www/web-quanly-khachsan/style/mainpages/loginstyle.css</file>
         </group>
     </open-files>
 </project-private>

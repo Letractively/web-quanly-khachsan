@@ -72,7 +72,7 @@
 		</tr>
 			<tr>
 				<td colspan="2">
-					<input type="submit" name="addnew" class="button" value="Thêm">
+					<input type="submit" name="addnew" class="add new" value="Thêm">
 				</td>
 			</tr>
 		</form>
