@@ -9,7 +9,7 @@
 		<div class="sep">
 			<table>
 			<form action="" method="post">				
-				  <label style="color: blue;"><b>Tìm kiếm theo tên phòng:</b></label><input type="text" name="s" autocomplete="off" /><input type="submit" name="search" value="Tìm Kiếm" id="search"/>
+				  <label style="color: blue;"><b>Tìm kiếm theo loại phòng:</b></label><input type="text" name="s" autocomplete="off" /><input type="submit" name="search" value="Tìm Kiếm" id="search"/>
 			</form>
 			</table>
 		</div>
@@ -27,7 +27,7 @@
 				if(isset($_POST['search'])){
 					$s = $_POST['s'];
 					$cnn2 = DB::StaticConnect();
-					$rs2 = DB::ExecuteQuery("select * from phong where tenphong like '%$s%'", $cnn2);
+					$rs2 = DB::ExecuteQuery("select * from phong where loaiphong like '%$s%'", $cnn2);
 					while($phong = mysql_fetch_assoc($rs2)){
 					?>
 					<tr>

@@ -35,8 +35,6 @@
 		</div>
 		<div id="nav">
 			<ul>
-				<li class="upp"> <a href="#">Trang Chủ</a>
-				</li>
 				<li class="upp"><a href="#">Quản lý thành viên</a>
 					<ul>
 						
@@ -91,7 +89,20 @@
 					<ul>
 						<li> <a href="dashboard.php?type=room&action=all">Tất cả phòng</a></li>
 						<li> <a href="dashboard.php?type=room&action=search">Tìm kiếm phòng</a></li>
-						<li> <a href="dashboard.php?type=room&action=addnew">Thêm mới phòng</a></li>
+						<li> <a href="dashboard.php?type=room&action=addnew">Thêm mới phòng</a></li>						
+					</ul>
+				</li>
+								<?php
+							}
+						?>
+						<?php 
+							if(user_can($idtaikhoan, "manage_room")){
+								?>
+				<li class="upp"><a href="dashboard.php?type=roomlease">Quản lý thuê phòng</a>
+					<ul>
+						<li class="upp"> <a href="dashboard.php?type=roomlease&action=all">Tất cả thuê phòng</a></li>
+						<li class="upp"> <a href="dashboard.php?type=roomlease&action=search">Tìm kiếm phòng cho thuê</a></li>
+						<li class="upp"> <a href="dashboard.php?type=roomlease&action=addnew">Thêm mới thuê phòng</a></li>
 					</ul>
 				</li>
 								<?php
@@ -190,8 +201,22 @@
 								?>
 								<li ><a class="icon category" href="dashboard.php?type=room&action=all">Tất cả các phòng</a></li>
 								<li ><a class="icon category" href="dashboard.php?type=room&action=search">Tìm kiếm phòng</a></li>
-								<li ><a class="icon add_page" href="dashboard.php?type=room&action=addnew">Thêm mới phòng</a></li>
-								
+								<li ><a class="icon add_page" href="dashboard.php?type=room&action=addnew">Thêm mới phòng</a></li>								
+								<?php
+							}
+						?>
+					
+				</ul>
+                            </li>
+                            <li ><a href="#">Quản lý thuê phòng</a>
+				
+				<ul>
+						<?php 
+							if(user_can($idtaikhoan, "manage_roomlease")){
+								?>
+								<li ><a class="icon category" href="dashboard.php?type=roomlease&action=all">Tất cả các thuê phòng</a></li>
+								<li ><a class="icon category" href="dashboard.php?type=roomlease&action=search">Tìm kiếm phòng cho thuê</a></li>
+								<li ><a class="icon add_page" href="dashboard.php?type=roomlease&action=addnew">Thêm thuê phòng</a></li>								
 								<?php
 							}
 						?>
@@ -228,6 +253,21 @@
 					
 				</ul>
                                 </li>
+                                <li ><a href="#">Quản lý thuê dịch vụ</a>
+				
+				<ul>
+						<?php 
+							if(user_can($idtaikhoan, "manage_servicelease")){
+								?>
+								<li ><a class="icon category" href="dashboard.php?type=servicelease&action=all">Danh sách cho thuê dịch vụ</a></li>
+								<li ><a class="icon category" href="dashboard.php?type=servicelease&action=search">Tìm kiếm dịch vụ cho thuê</a></li>
+								<li ><a class="icon add_page" href="dashboard.php?type=servicelease&action=addnew">Cho thuê dịch vụ</a></li>								
+								<?php
+							}
+						?>
+					
+				</ul>
+                            </li>
                         </ul>
                     <script>
 
@@ -329,6 +369,30 @@
 									case 'update': include_once 'dashboard/roomtype_update.php'; break;
 									case 'delete': include_once 'dashboard/roomtype_delete.php'; break;
 									case 'search': include_once 'dashboard/roomtype_search.php'; break;
+								}
+							}
+							break;
+						case 'roomlease':
+							if(!isset($_GET['action']) || (isset($_GET['action']) && $_GET['action'] == "all")){
+								include_once 'dashboard/roomlease.php';
+							}else if(isset($_GET['action'])){
+								switch($_GET['action']){
+									case 'addnew': include_once 'dashboard/roomlease_addnew.php'; break;
+									case 'update': include_once 'dashboard/roomlease_update.php'; break;
+									case 'delete': include_once 'dashboard/roomlease_delete.php'; break;
+									case 'search': include_once 'dashboard/roomlease_search.php'; break;
+								}
+							}
+							break;
+						case 'servicelease':
+							if(!isset($_GET['action']) || (isset($_GET['action']) && $_GET['action'] == "all")){
+								include_once 'dashboard/servicelease.php';
+							}else if(isset($_GET['action'])){
+								switch($_GET['action']){
+									case 'addnew': include_once 'dashboard/servicelease_addnew.php'; break;
+									case 'update': include_once 'dashboard/servicelease_update.php'; break;
+									case 'delete': include_once 'dashboard/servicelease_delete.php'; break;
+									case 'search': include_once 'dashboard/servicelease_search.php'; break;
 								}
 							}
 							break;						
