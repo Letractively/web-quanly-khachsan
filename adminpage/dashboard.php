@@ -35,6 +35,8 @@
 		</div>
 		<div id="nav">
 			<ul>
+                            <li class="upp"> <a href="../index.php">Trang Chủ</a>
+				</li>
 				<li class="upp"><a href="#">Quản lý thành viên</a>
 					<ul>
 						
