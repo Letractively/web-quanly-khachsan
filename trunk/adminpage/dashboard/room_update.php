@@ -24,25 +24,23 @@
 						}
 						//=================================================
 						if(isset($_POST['update'])){
-							$tenphong = $_POST['tenphong'];
+							//$tenphong = $_POST['tenphong'];
 							$loaiphong = $_POST['loaiphong'];
 							$hinhanh = $_POST['hinhanh'];
 							$tinhtrang = $_POST['tinhtrang'];
-							if($tenphong == ""||$loaiphong==""){
-								echo "<span style='color:red;'>Lỗi: Tên phòng và loại phòng không được trống.</span>";
-							}else{
-								if(room_exists($tenphong)){
-									echo "<span style='color:red;'>Lỗi: Tên phòng đã tồn tại.</span>";
-								}else{
+							//if($tenphong == ""||$loaiphong==""){
+								//echo "<span style='color:red;'>Lỗi: Tên phòng và loại phòng không được trống.</span>";
+							//}else{
+								//if(room_exists($tenphong)){
+									//echo "<span style='color:red;'>Lỗi: Tên phòng đã tồn tại.</span>";
+								//}else{
 									$cnn = DB::StaticConnect();
-									$rs = DB::ExecuteQuery("update phong set tenphong = '$tenphong', loaiphong = '$loaiphong',hinhanh = '$hinhanh', tinhtrang='$tinhtrang' where idphong = '$idphong'", $cnn);
+									$rs = DB::ExecuteQuery("update phong set loaiphong = '$loaiphong',hinhanh = '$hinhanh', tinhtrang='$tinhtrang' where idphong = '$idphong'", $cnn);
 									if($rs){
 										echo "<script>alert('Cập nhật phòng thành công'); location.href='dashboard.php?type=room&action=all';</script>";
 									}
 								}
 								
-							}
-						}
 					?>
 				</td>
 			</tr>
@@ -51,7 +49,7 @@
 					<label for="tenphong">Tên phòng</label>
 				</td>
 				<td>
-					<input value="<?php echo $cap['tenphong']; ?>" type="text" autocomplete="off" name="tenphong" id="tenphong" size="30">
+					<input disabled value="<?php echo $cap['tenphong']; ?>" type="text" autocomplete="off" name="tenphong" id="tenphong" size="30">
 				</td>
 			</tr>
 			<tr>
