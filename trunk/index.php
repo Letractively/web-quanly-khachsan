@@ -55,8 +55,9 @@ require_once './include/mainpages/functions.php';
     </head>
     <body>
         <div class="login-bar">
-		<a href="#" class="login-button">Đăng Nhập</a>
+            <a href="adminpage/admin.php" class="login-button">Đăng Nhập</a>
 	</div>
+        <!--
         <div class="overlay"></div>
 	<form class="login">
 		<div class="login-header">
@@ -96,7 +97,7 @@ require_once './include/mainpages/functions.php';
 })(jQuery);
 
 </script>
-        
+        -->
         <div id="container"><!--div bao ngoai-->
             <div id="toppage"><!--div phan tren trang web-->
                 <?php
