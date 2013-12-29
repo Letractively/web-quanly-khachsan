@@ -28,9 +28,7 @@ printpage.focus();
 <tr>
 <td height="129">&nbsp;</td>
 <p>
-<?php
-include_once 'HoaDonView.php';
-?>
+
 <p>
 </tr>
 </table>
