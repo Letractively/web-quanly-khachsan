@@ -74,15 +74,26 @@ require_once '../Views/KhachHangView.php';
        if (isset($_POST["makh"]) && isset($_POST["room"])) {
            $makh = $_POST["makh"];
            $room = $_POST["room"];
-           $ngaydat = $_POST["cdate"];
-           $ngaynhan = $_POST["cdate"];
-           
+           $ngayden = $_POST["cdate"];
+           $ngaydi = $_POST["cdate"];
+           $ngayden = explode("-",$ngayden);
+                            $ngaydi = explode("-",$ngaydi);
+
+                            $ngaydi=mktime(0,0,0,$ngaydi[2],$ngaydi[0],$ngaydi[1]);
+                            $ngayden=mktime(0,0,0,$ngayden[2],$ngayden[0],$ngayden[1]);
+                            $d=$ngayden - $ngaydi;
+                            
+                            if ($d <0) {
+                                echo "date error";
+                                exit();
+                            }                
+                            
            if (!is_numeric($makh) ){
                echo "Kiểm tra thông tin";
                exit();
            }
            $sql = "INSERT INTO thuephong VALUES
-               ('$makh','$room','$ngaydat','$ngaynhan')";
+               ('$makh','$room','$ngayden','$ngaydi')";
           
            
            $result = mysql_query($sql,$db);
