@@ -84,12 +84,13 @@ mysql_select_db("quanlykhachsan");
                echo "Kiểm tra thông tin";
                exit();
            }
-           $sql = "INSERT INTO thuedichvu VALUES
-               ('$makh','$service','$ngaydung','$soluong','$cost')";
+           $sql = "INSERT INTO dichvu VALUES
+               ('','$service','$cost','VND','1')";
            $result = mysql_query($sql,$db);
            if ($result) {
                echo "<p align ='center'>Thành Công</p>";
            }
+          
  else {
      echo "Kiểm tra lại thông tin";
  }

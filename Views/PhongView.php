@@ -5,7 +5,7 @@ include '../Datalayers/PhongSQL.php';
     $a = new PhongSQL();
     if($a->KetNoi()){
         
-    mysql_select_db("quanlykhachsan");
+    mysql_select_db("QuanLyKhachSan");
     $result = mysql_query("SELECT * FROM Phong");
  
    

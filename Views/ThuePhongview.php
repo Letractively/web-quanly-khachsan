@@ -83,6 +83,7 @@ require_once '../Views/KhachHangView.php';
            }
            $sql = "INSERT INTO thuephong VALUES
                ('$makh','$room','$ngaydat','$ngaynhan')";
+          
            
            $result = mysql_query($sql,$db);
           
