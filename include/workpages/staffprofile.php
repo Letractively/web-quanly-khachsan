@@ -15,7 +15,17 @@
                     <label>mã số nhân viên :</label>
                 </td>
                 <td>
-                    <p>0001</p>
+                    <?php
+                                    //$sql = "select * from nhanvien";
+                                    //$result = mysql_query($sql,$db);
+                                    //$n = mysql_num_rows($result);
+                                    //if (mysql_num_rows($result)<>0) {
+                                         // while($row = mysql_fetch_row($result)){
+                                              $manv =$_SESSION['authentication']['idtaikhoan'];
+                                               echo "<p>$manv</p>";
+                                  
+                                           
+                                   ?>
                 </td>
             </tr>
             <tr>
