@@ -36,21 +36,21 @@ require_once '../Views/KhachHangView.php';
             </td>
                     </tr>
                     <tr>
-                        <td><label>Phòng :</label></td>
-                        <td>
-                            <select class="cbb" name="room" >
-                                <option value="">Chọn phòng</option>
-                                <option value="001"> Phòng 001</option>
-                                <option value="002"> Phòng 002</option>
-                                <option value="003"> Phòng 003</option>
-                                <option value="004"> Phòng 004</option>
-                                <option value="005"> Phòng 005</option>
-                                <option value="006"> Phòng 006</option>
-                                <option value="007"> Phòng 007</option>
-                                <option value="008"> Phòng 008</option>
-                                <option value="009"> Phòng 009</option>
-                            </select>
-                        </td>
+                        <td><label>Mã Phòng :</label></td>
+                        <td> <select name="room" id="room">
+                                   <?php
+                                    $sql = "select * from phong";
+                                    $result = mysql_query($sql,$db);
+                                    $n = mysql_num_rows($result);
+                                    if (mysql_num_rows($result)<>0) {
+                                          while($row = mysql_fetch_row($result)){
+                                              $makh =$row[0];
+                                               echo "<option value ='$makh'>$makh</option>";
+                                           }
+                                    }
+                                   ?>
+                                </select>
+                    </td>       
                     </tr>
                     <tr>
                         <td><label>Ngày đặt :</label></td>
@@ -74,31 +74,21 @@ require_once '../Views/KhachHangView.php';
        if (isset($_POST["makh"]) && isset($_POST["room"])) {
            $makh = $_POST["makh"];
            $room = $_POST["room"];
-           $ngayden = $_POST["cdate"];
-           $ngaydi = $_POST["cdate"];
-           $ngayden = explode("-",$ngayden);
-                            $ngaydi = explode("-",$ngaydi);
-
-                            $ngaydi=mktime(0,0,0,$ngaydi[2],$ngaydi[0],$ngaydi[1]);
-                            $ngayden=mktime(0,0,0,$ngayden[2],$ngayden[0],$ngayden[1]);
-                            $d=$ngayden - $ngaydi;
-                            
-                            if ($d <0) {
-                                echo "date error";
-                                exit();
-                            }                
-                            
+           $ngaydat = $_POST["cdate"];
+           $ngaynhan = $_POST["cdate"];
+           
            if (!is_numeric($makh) ){
                echo "Kiểm tra thông tin";
                exit();
            }
            $sql = "INSERT INTO thuephong VALUES
-               ('$makh','$room','$ngayden','$ngaydi')";
+               ('','$room','$makh','$ngaydat','$ngaynhan')";
           
            
            $result = mysql_query($sql,$db);
           
-           if ($result) {
+           if (!$result) {
+               echo "".mysql_error();
                echo "<p align ='center'>Thành Công</p>";
            }
        }
