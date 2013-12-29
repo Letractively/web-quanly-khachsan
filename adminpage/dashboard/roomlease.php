@@ -19,7 +19,7 @@
 			$showposts = 6;
 			$begin = ($paged - 1) * $showposts;  
 			$cnn = DB::StaticConnect();
-			$rs2 = DB::ExecuteQuery("select idphong, tenphong,tenkhachhang,cmnd, ngayden, ngaydi from phong as p, thuephong as tp, khachhang as kh where p.idphong=tp.idphong and tp.cmnd=kh.cmnd", $cnn);
+			$rs2 = DB::ExecuteQuery("select tp.idphong, p.tenphong, kh.tenkhachhang, tp.cmnd, tp.ngayden, tp.ngaydi from phong as p, thuephong as tp, khachhang as kh where p.idphong=tp.idphong and tp.cmnd=kh.cmnd", $cnn);
 			while($roomlease = mysql_fetch_assoc($rs2)){
 				?>
 				<tr>
@@ -30,8 +30,7 @@
 					<td><?php echo $roomlease['ngayden']; ?></td>
 					<td><?php echo $roomlease['ngaydi']; ?></td>
 					<td style="width:50px;">
-						<a title="Sửa" class="table-icon edit" href="dashboard.php?type=role&action=update&idvaitro=<?php echo $role['idvaitro']; ?>"></a>
-						<a title="Xóa" class="table-icon delete" href="javascript:void(0);" onclick="if(confirm('Bạn có chắc chắc xóa vai trò này không?')) location.href='dashboard.php?type=role&action=delete&idvaitro=<?php echo $role['idvaitro']; ?>';"></a>
+						<a title="Xóa" class="table-icon delete" href="javascript:void(0);" onclick="if(confirm('Bạn có chắc chắc xóa vai trò này không?')) location.href='dashboard.php?type=roomlease&action=delete&idvaitro=<?php echo $role['idvaitro']; ?>';"></a>
 					</td>
 				</tr>
 				<?php 
