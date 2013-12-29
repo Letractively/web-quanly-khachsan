@@ -1,17 +1,16 @@
-<?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+<form>
+                <table>
+                    <tr>
+                        <td><label>Thành tiền : </label></td>
 
-/**
- * Description of ChiTietHoaDonView
- *
- * @author Admin
- */
-class ChiTietHoaDonView {
-    //put your code here
-}
-
-?>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input class="btn" type="button" value="Thanh toán" name="payHDDV">
+                            <input class="btn" type="button" value="In HĐDV" name="prtHDDV">
+                        </td>
+                    </tr>
+             </table>
+      </form>
