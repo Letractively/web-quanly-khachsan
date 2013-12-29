@@ -53,9 +53,22 @@ require_once './include/mainpages/functions.php';
     <script type="text/javascript" lang="javascript" src="cript/scroll.js"></script>
     <script type="text/javascript" lang="javascript" src="cript/login.js"></script>
     </head>
-    <body onload="hide()">
+    <body >
         <div id="login-bar" >
-            <a href="adminpage/admin.php" class="login-button">Đăng Nhập</a>
+        	<?php
+        		if(!isset($_SESSION['authentication'])){
+            	?><a href="adminpage/admin.php" class="login-button">Đăng Nhập</a><?php
+       		 } else {
+       		 		 if(isset($_SESSION['authentication'])){
+            		?><a href="adminpage/admin.php" class="login-button">Quản lý</a><?php
+					//if(!isset($_SESSION['authentication'])){
+						//header('location: index.php');
+					}
+
+					//kiem tra 
+				}
+        	?>
+           
 	</div>
      
        
