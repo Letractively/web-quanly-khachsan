@@ -59,7 +59,7 @@ mysql_select_db("quanlykhachsan");
                     </tr>
                      <tr>
                         <td><label> Đơn Giá:</label></td>
-                        <td><input class="num" type="number" placeholder="0" name="dongia" ></td>
+                        <td><input class="num" type="number" placeholder="0" name="dongia"></td>
                     </tr>
                     <tr>
                         <td><label>Số lượng :</label></td>
@@ -84,10 +84,10 @@ mysql_select_db("quanlykhachsan");
            $dongia = $_POST["dongia"];
            $soluong = $_POST["sum"];
            $thanhtien =  date($dongia) * date($soluong);
-           echo "<tr style='visibility: hidden;'>";
-                        echo "<td ><label style='visibility: hidden;'>thành tiền :</label></td>";
-                        echo "<td style='visibility: hidden;'><input class='num' style='visibility: hidden;' type='number' placeholder='0' name='cost' values ='$thanhtien'></td>";
-                    echo "</tr>";
+//           echo "<tr>";
+//                        echo "<td><label>thành tiền :</label></td>";
+//                        echo "<td><input class='num' type='number' placeholder='0' name='cost' values ='$thanhtien'> VND</td>";
+//                    echo "</tr>";
            if (!is_numeric($thanhtien) ){
                echo "Kiểm tra thông tin";
                exit();
@@ -95,7 +95,7 @@ mysql_select_db("quanlykhachsan");
            
            
             $sql = "insert into thuedichvu values (
-                '','$tendichvu','$makh','$ngaydung','$dongia','$soluong',$thanhtien)";
+               '', '','$tendichvu','$makh','$ngaydung','$dongia','$soluong',$thanhtien)";
             $result = mysql_query($sql,$db);
            
            if ($result) {
@@ -110,6 +110,7 @@ mysql_select_db("quanlykhachsan");
       
   ?>
        
+</fieldset>
 </fieldset>
         <a href="./Views/printHD.php"><input type="button" value="In phiếu" class="btn" name="prtserviceuse"></a>
         

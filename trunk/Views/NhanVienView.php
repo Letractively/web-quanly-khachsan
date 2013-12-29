@@ -12,8 +12,9 @@ mysql_select_db("quanlykhachsan");
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      </head>
      <body>
-         <form action="NhanVienView.php" method ="post">
+         
     <table>
+        <form action="NhanVienView.php" method ="post">
         <tr>
             <td><label>Mã Nhân Viên :</label></td>
             <td> <select name="manv" id="manv">
@@ -36,8 +37,9 @@ mysql_select_db("quanlykhachsan");
                 <input type="submit" name="submit" value="Tìm Thông Tin">
             </td>
         </tr>
+        </form>
     </table>
-</form>
+
         <?php
            if (isset($_POST["manv"])) {
               $manv = $_POST["manv"];
