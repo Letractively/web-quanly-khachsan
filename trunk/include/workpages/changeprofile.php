@@ -1,11 +1,4 @@
-<?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
 <div id="changeprofile">
     <fieldset>
         <legend>ĐỔI THÔNG TIN CÁ NHÂN</legend>
@@ -13,6 +6,7 @@
             <tr>
                 <td>
                     <label>Mã số nhân viên :</label>
+                  
                 </td>
                 <td>
                     <input class="text" type="text" placeholder="Mã số nhân viên..." name="changeinfo-msnv">
@@ -69,7 +63,7 @@
             <tr>
                 <td></td>
                 <td>
-                    <input class="btn" type="reset" value="Huỷ" name="changeinfo-reset">
+                    <a href="index.php?act=profile"><input class="btn" type="reset" value="Huỷ" name="changeinfo-reset"></a>
                     <input class="btn" type="submit" value="Đổi thông tin" name="changeinfo-submit">
                 </td>
             </tr>

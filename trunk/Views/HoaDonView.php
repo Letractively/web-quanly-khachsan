@@ -16,8 +16,9 @@ mysql_select_db("quanlykhachsan");
         
     </head>
     <body>
-        <form action="HoaDonView.php" method ="post">
+        
     <table>
+        <form action="HoaDonView.php" method ="post">
         <tr>
             <td><label>Mã khách hàng :</label></td>
             <td> <select name="mkh" id="makh">
@@ -40,8 +41,9 @@ mysql_select_db("quanlykhachsan");
                 <input type="submit" name="submit" value="Tìm Thông Tin">
             </td>
         </tr>
+        </form>
     </table>
-</form>
+
 
 <?php
 

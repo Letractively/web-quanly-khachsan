@@ -1,5 +1,6 @@
-<?php
 
+<?php
+$manv =$_SESSION['authentication'];
 $work = "";
     if (isset($_GET['w']))
         $work = $_GET['w'];
