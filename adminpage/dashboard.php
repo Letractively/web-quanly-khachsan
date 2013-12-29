@@ -98,13 +98,13 @@
 							}
 						?>
 						<?php 
-							if(user_can($idtaikhoan, "manage_room")){
+							if(user_can($idtaikhoan, "manage_roomlease")){
 								?>
 				<li class="upp"><a href="dashboard.php?type=roomlease">QL Thuê Phòng</a>
 					<ul>
 						<li class="upp"> <a href="dashboard.php?type=roomlease&action=all">Tất cả thuê phòng</a></li>
-						<li class="upp"> <a href="dashboard.php?type=roomlease&action=search">Tìm kiếm phòng cho thuê</a></li>
-						<li class="upp"> <a href="dashboard.php?type=roomlease&action=addnew">Thêm mới thuê phòng</a></li>
+						<li class="upp"> <a href="dashboard.php?type=roomlease&action=search">Tìm kiếm thuê phòng</a></li>
+						
 					</ul>
 				</li>
 								<?php
@@ -379,7 +379,6 @@
 								include_once 'dashboard/roomlease.php';
 							}else if(isset($_GET['action'])){
 								switch($_GET['action']){
-									case 'addnew': include_once 'dashboard/roomlease_addnew.php'; break;
 									case 'update': include_once 'dashboard/roomlease_update.php'; break;
 									case 'delete': include_once 'dashboard/roomlease_delete.php'; break;
 									case 'search': include_once 'dashboard/roomlease_search.php'; break;
@@ -390,8 +389,7 @@
 							if(!isset($_GET['action']) || (isset($_GET['action']) && $_GET['action'] == "all")){
 								include_once 'dashboard/servicelease.php';
 							}else if(isset($_GET['action'])){
-								switch($_GET['action']){
-									case 'addnew': include_once 'dashboard/servicelease_addnew.php'; break;
+								switch($_GET['action']){									
 									case 'update': include_once 'dashboard/servicelease_update.php'; break;
 									case 'delete': include_once 'dashboard/servicelease_delete.php'; break;
 									case 'search': include_once 'dashboard/servicelease_search.php'; break;
