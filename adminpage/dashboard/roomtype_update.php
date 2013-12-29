@@ -13,35 +13,34 @@
 			<tr>
 				<td colspan="2">
 					<?php
-						if(isset($_GET['idloadphong'])){
-							$idloadphong = (int)$_GET['idloadphong'];
+						if(isset($_GET['idloaiphong'])){
+							$idloaiphong = (int)$_GET['idloaiphong'];
 							$cnn = DB::StaticConnect();
-							$rs = DB::ExecuteQuery("select * from loaiphong where idloadphong = '$idloadphong'", $cnn);
+							$rs = DB::ExecuteQuery("select * from loaiphong where idloaiphong = '$idloaiphong'", $cnn);
 							$cap = mysql_fetch_assoc($rs);
 						}else{
 							header("location: dashboard.php?type=roomtype&action=all");
 						}
 						//=================================================
 						if(isset($_POST['update'])){
-							$loaiphong = $_POST['loaiphong'];
+							//	$loaiphong = $_POST['loaiphong'];
 							$dongia = $_POST['dongia'];
 							$donvi = $_POST['donvi'];
 							$tinhtrang = $_POST['tinhtrang'];
-							if($loaiphong == ""||$dongia==""){
-								echo "<span style='color:red;'>Lỗi: Loại phòng và đơn giá không được trống.</span>";
-							}else{
-								if(capability_exists($loaiphong)){
-									echo "<span style='color:red;'>Lỗi: loại phòng đã tồn tại.</span>";
-								}else{
+							if($dongia==""){
+								echo "<span style='color:red;'>Lỗi:Đơn giá không được trống.</span>";
+							}//else{
+								//if(capability_exists($loaiphong)){
+								//	echo "<span style='color:red;'>Lỗi: loại phòng đã tồn tại.</span>";
+								else{
 									$cnn = DB::StaticConnect();
-									$rs = DB::ExecuteQuery("update loaiphong set loaiphong = '$loaiphong', dongia = '$dongia',donvi = '$donvi',tinhtrang='$tinhtrang' where idloaiphong = '$idloaiphong'", $cnn);
+									$rs = DB::ExecuteQuery("update loaiphong set dongia = '$dongia',donvi = '$donvi',tinhtrang='$tinhtrang' where idloaiphong = '$idloaiphong'", $cnn);
 									if($rs){
 										echo "<script>alert('Cập nhật loại phòng thành công'); location.href='dashboard.php?type=roomtype&action=all';</script>";
 									}
 								}
 								
 							}
-						}
 					?>
 				</td>
 			</tr>
@@ -73,14 +72,14 @@
 			<td>Tình trạng</td>
 			<td>
 				<select name="tinhtrang" id="tinhtrang">
-					<option <?php if($loaiphong['tinhtrang'] == 1) echo "selected"; ?> value="1">Đang sử dụng</option>
-					<option <?php if($loaiphong['tinhtrang'] == 0) echo "selected"; ?> value="0">Tạm nghưng sử dụng</option>
+					<option value="1">đang sử dụng</option>
+					<option value="0">tạm dừng sử dụng</option>
 				</select>
 			</td>
 		</tr>
 			<tr>
 				<td colspan="2">
-					<input type="submit" name="update" class="button" value="Cập nhật">
+					<input type="submit" name="update" class="go" value="Cập nhật">
 				</td>
 			</tr>
 		</form>
