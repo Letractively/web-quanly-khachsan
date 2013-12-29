@@ -11,21 +11,22 @@ if (!$db) {
 mysql_select_db("quanlykhachsan");
 
 ?>
+<html>
+    <head></head>
+    <body>
 <div id="serviceuseform">
     <div id="serviceuseform-addcustomer">
-        <?php
-            require_once './Views/KhachHangView.php';
-        ?>
+        
     </div>
     <div id="serviceuseform-form">
         <fieldset id="serviceuseform-form-info">
        <legend>Dùng dịch vụ</legend>
-       <form action="index.php?act=profile&w=useservice" method="post">
+       <form action="ThueDichVu.php" method="post">
                 <table>
                     <tr>
                         <td><label>Mã khách hàng :</label></td>
                        
-                        <td> <select name="makh" id="makh" class="cbb">
+            <td> <select name="makh" id="makh">
                                    <?php
                                     $sql = "select * from khachhang";
                                     $result = mysql_query($sql,$db);
@@ -59,13 +60,16 @@ mysql_select_db("quanlykhachsan");
                     </tr>
                      <tr>
                         <td><label> Đơn Giá:</label></td>
-                        <td><input class="num" type="number" placeholder="0" name="dongia" ></td>
+                        <td><input class="num" type="number" placeholder="0" name="dongia"></td>
                     </tr>
                     <tr>
                         <td><label>Số lượng :</label></td>
                         <td><input class="num" type="number" placeholder="0" name="sum"></td>
                     </tr>
-                   
+                    <tr>
+                        <td><label>thành tiền :</label></td>
+                        <td><input class="num" type="number" placeholder="0" name="cost"> VND</td>
+                    </tr>
                     <tr>
                         <td></td>
                         <td> 
@@ -83,11 +87,8 @@ mysql_select_db("quanlykhachsan");
            $ngaydung = $_POST["usedate"];
            $dongia = $_POST["dongia"];
            $soluong = $_POST["sum"];
-           $thanhtien =  date($dongia) * date($soluong);
-           echo "<tr style='visibility: hidden;'>";
-                        echo "<td ><label style='visibility: hidden;'>thành tiền :</label></td>";
-                        echo "<td style='visibility: hidden;'><input class='num' style='visibility: hidden;' type='number' placeholder='0' name='cost' values ='$thanhtien'></td>";
-                    echo "</tr>";
+           $thanhtien = $_POST["cost"];
+           
            if (!is_numeric($thanhtien) ){
                echo "Kiểm tra thông tin";
                exit();
@@ -111,7 +112,8 @@ mysql_select_db("quanlykhachsan");
   ?>
        
 </fieldset>
-        <a href="./Views/printHD.php"><input type="button" value="In phiếu" class="btn" name="prtserviceuse"></a>
-        
+        <input type="button" value="In phiếu" class="btn" name="prtserviceuse">
     </div>
 </div>
+</body>
+</html>

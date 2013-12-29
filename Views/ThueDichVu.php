@@ -112,7 +112,7 @@ mysql_select_db("quanlykhachsan");
   ?>
        
 </fieldset>
-        <input type="button" value="In phiếu" class="btn" name="prtserviceuse">
+        <a href="./Views/printHD.php"><input type="button" value="In phiếu" class="btn" name="prtserviceuse"></a>
     </div>
 </div>
 </body>
