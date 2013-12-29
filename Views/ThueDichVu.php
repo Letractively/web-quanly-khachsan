@@ -66,10 +66,7 @@ mysql_select_db("quanlykhachsan");
                         <td><label>Số lượng :</label></td>
                         <td><input class="num" type="number" placeholder="0" name="sum"></td>
                     </tr>
-                    <tr>
-                        <td><label>thành tiền :</label></td>
-                        <td><input class="num" type="number" placeholder="0" name="cost"> VND</td>
-                    </tr>
+                   
                     <tr>
                         <td></td>
                         <td> 
@@ -87,8 +84,11 @@ mysql_select_db("quanlykhachsan");
            $ngaydung = $_POST["usedate"];
            $dongia = $_POST["dongia"];
            $soluong = $_POST["sum"];
-           $thanhtien = $_POST["cost"];
-           
+           $thanhtien =  date($dongia) * date($soluong);
+           echo "<tr>";
+                        echo "<td><label>thành tiền :</label></td>";
+                        echo "<td><input class='num' type='number' placeholder='0' name='cost' values ='$thanhtien'> VND</td>";
+                    echo "</tr>";
            if (!is_numeric($thanhtien) ){
                echo "Kiểm tra thông tin";
                exit();
