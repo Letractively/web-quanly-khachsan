@@ -379,7 +379,6 @@
 								include_once 'dashboard/roomlease.php';
 							}else if(isset($_GET['action'])){
 								switch($_GET['action']){
-									case 'update': include_once 'dashboard/roomlease_update.php'; break;
 									case 'delete': include_once 'dashboard/roomlease_delete.php'; break;
 									case 'search': include_once 'dashboard/roomlease_search.php'; break;
 								}
@@ -389,8 +388,7 @@
 							if(!isset($_GET['action']) || (isset($_GET['action']) && $_GET['action'] == "all")){
 								include_once 'dashboard/servicelease.php';
 							}else if(isset($_GET['action'])){
-								switch($_GET['action']){									
-									case 'update': include_once 'dashboard/servicelease_update.php'; break;
+								switch($_GET['action']){								
 									case 'delete': include_once 'dashboard/servicelease_delete.php'; break;
 									case 'search': include_once 'dashboard/servicelease_search.php'; break;
 								}

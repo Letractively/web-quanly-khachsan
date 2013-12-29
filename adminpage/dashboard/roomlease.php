@@ -1,5 +1,5 @@
 <div class="full_w">
-	<div class="h_title">Danh sách vai trò</div>
+	<div class="h_title">Danh sách sách thuê phòng</div>
 	<div class="entry">
 		<div class="sep"></div>
 	</div>
