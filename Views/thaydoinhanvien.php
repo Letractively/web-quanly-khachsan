@@ -15,8 +15,9 @@ mysql_select_db("quanlykhachsan");
 <div id="changeprofile">
     <fieldset>
         <legend>ĐỔI THÔNG TIN CÁ NHÂN</legend>
-        <form action ="thaydoinhanvien.php" method="post">
+        
         <table id="changeprofile-info">
+            <form action ="thaydoinhanvien.php" method="post">
             <tr>
                 <td>
                     <label>Mã số nhân viên :</label>
@@ -91,8 +92,9 @@ mysql_select_db("quanlykhachsan");
                     <input class="btn" type="submit" value="Đổi thông tin" name="changeinfo-submit">
                 </td>
             </tr>
+             </form>
         </table>
-        </form>
+       
         <?php
     if (isset($_POST["manv"])) {
      $manv = $_POST["manv"];
