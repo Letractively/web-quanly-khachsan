@@ -1,6 +1,13 @@
 
 <?php
-$manv =$_SESSION['authentication'];
+//include_once 'adminpage/init.php';
+if(!isset($_SESSION['authentication'])){
+
+    header('location:index.php');
+}
+//if(user_can(idtaikhoan, "manage_roomlease")&&  user_can($idtaikhoan, "manage_servicelease")){
+ ///   ;
+//}
 $work = "";
     if (isset($_GET['w']))
         $work = $_GET['w'];
