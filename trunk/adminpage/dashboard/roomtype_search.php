@@ -9,7 +9,7 @@
 		<div class="sep">
 			<table>
 			<form action="" method="post">				
-				  <label style="color: blue;"><b>Tìm kiếm theo tên loại phòng:</b></label><input type="text" name="s" autocomplete="off" /><input type="submit" name="search" value="Tìm Kiếm" id="search"/>
+				  <label >Tìm kiếm loại phòng:</label><input type="text" name="s" autocomplete="off" /><input class="button" style="margin-left: 50px; height: 30px; border-radius:4px; box-shadow:0 0 0 2pt grey;" type="submit" name="search" value="Tìm Kiếm" id="search"/>
 			</form>
 			</table>
 		</div>
