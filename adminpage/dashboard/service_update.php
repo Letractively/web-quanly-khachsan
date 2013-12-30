@@ -23,25 +23,23 @@
 						}
 						//=================================================
 						if(isset($_POST['update'])){
-							$tendv = $_POST['tendv'];
+							//$tendv = $_POST['tendv'];
 							$gia = $_POST['gia'];
 							$donvi = $_POST['donvi'];
 							$tinhtrang = $_POST['tinhtrang'];
-							if($tendv == ""){
-								echo "<span style='color:red;'>Lỗi: Tên dịch vụ không được trống.</span>";
-							}else{
-								if(service_exists($tendv)){
-									echo "<span style='color:red;'>Lỗi: Dịch vụ đã tồn tại.</span>";
-								}else{
+							//if($tendv == ""){
+								//echo "<span style='color:red;'>Lỗi: Tên dịch vụ không được trống.</span>";
+							//}else{
+								//if(service_exists($tendv)){
+									//echo "<span style='color:red;'>Lỗi: Dịch vụ đã tồn tại.</span>";
+								//}else{
 									$cnn = DB::StaticConnect();
-									$rs = DB::ExecuteQuery("update dichvu set tendv = '$tendv', gia = '$gia',donvi = '$donvi',tinhtrang = '$tinhtrang' where iddichvu = '$iddichvu'", $cnn);
+									$rs = DB::ExecuteQuery("update dichvu set gia = '$gia',donvi = '$donvi',tinhtrang = '$tinhtrang' where iddichvu = '$iddichvu'", $cnn);
 									if($rs){
 										echo "<script>alert('Cập nhật dịch vụ thành công'); location.href='dashboard.php?type=service&action=all';</script>";
 									}
 								}
 								
-							}
-						}
 					?>
 				</td>
 			</tr>
@@ -50,7 +48,7 @@
 					<label for="tendv">Tên dịch vụ</label>
 				</td>
 				<td>
-					<input value="<?php echo $cap['tendv']; ?>" type="text" autocomplete="off" name="tendv" id="tendv" size="40">
+					<input disabled value="<?php echo $cap['tendv']; ?>" type="text" autocomplete="off" name="tendv" id="tendv" size="40">
 				</td>
 			</tr>
 			<tr>
@@ -80,7 +78,7 @@
 		</tr>
 			<tr>
 				<td colspan="2">
-					<input type="submit" name="update" class="button" value="Cập nhật">
+					<input type="submit" name="update" class="go" value="Cập nhật">
 				</td>
 			</tr>
 		</form>

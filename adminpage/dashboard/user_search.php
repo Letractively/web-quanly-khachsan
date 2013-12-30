@@ -1,5 +1,5 @@
 <?php
-	if(!user_can($idtaikhoan, "delete_user")||!user_can($idtaikhoan,"update_user")){
+	if(!user_can($idtaikhoan, "search_user")){
 		header("location:dashboard.php");
 }
 ?>

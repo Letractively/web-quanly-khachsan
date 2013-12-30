@@ -3,18 +3,16 @@
 		header("location:dashboard.php");
 }
 ?>
-<?php 
-	if(user_can($idtaikhoan, "addnew_user")&&user_can($idtaikhoan, "delete_user")){
-		?>
-			<div class="full_w">
-	<div class="h_title">Thêm mới tài khoản</div>
+<div class="full_w">
+	<div class="h_title">Thêm mới</div>
 	<div class="entry">
 		<div class="sep">
 			<?php
+				
 				if(isset($_POST['addnew'])){
 					$tentk = $_POST['tentk'];
 					$matkhau = md5($_POST['matkhau']);
-					$ghichu = $_POST['ghichu']; $tinhtrang = $_POST['tinhtrang'];
+					$vaitro = $_POST['vaitro']; $tinhtrang = $_POST['tinhtrang'];
 					$ghichu = $_POST['ghichu'];
 					if(empty($tentk) || empty($matkhau)){
 						echo "<p style='color:red; margin:5px 0;'>Lỗi: vui lòng nhập đầy đủ các trường!</p>";
@@ -72,18 +70,9 @@
 			<td><textarea name="ghichu" cols="40" rows="5"></textarea></td>
 		</tr>
 		<tr>
-                    <td colspan="2" style="margin: auto; text-align: right;"><input type="submit" name="addnew" class="add new" value="Thêm"></td>
+			<td colspan="2" style="text-align: left;"><input type="submit" name="addnew" class="go" value="Thêm"></td>
 		</tr>
 		</form>
 	</table>
 	
 </div>
-		<?php		
-		}
-	if(user_can($idtaikhoan, "addnew_user")==FALSE){
-		header("location:dashboard.php");
-	}
-			
-?>
-
-

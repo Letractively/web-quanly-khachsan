@@ -65,7 +65,7 @@
 			<td><textarea name="ghichu" cols="40" rows="5"><?php echo $taikhoan['ghichu']; ?></textarea></td>
 		</tr>
 		<tr>
-			<td colspan="2" style="text-align: left;"><input type="submit" name="update" class="button" value="Cập nhật"></td>
+			<td colspan="2" style="text-align: left;"><input type="submit" name="update" class="go" value="Cập nhật"></td>
 		</tr>
 		</form>
 	</table>
