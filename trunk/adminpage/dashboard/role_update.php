@@ -87,7 +87,7 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<input type="submit" name="update" class="button" value="Cập nhật">
+					<input type="submit" name="update" class="go" value="Cập nhật">
 				</td>
 			</tr>
 		</form>
