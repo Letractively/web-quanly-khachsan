@@ -1,8 +1,8 @@
 <?php
 
 ?>
-<div id="Logotoppage">
-</div>
+<a href="index.php"><div id="Logotoppage">
+    </div></a>
 <div id="Languagetoppage">
     <span><a href="index.php">XuanHongHotel.com.vn</a></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
     <span>Ngôn ngữ</span>
