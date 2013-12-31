@@ -84,10 +84,10 @@ mysql_select_db("quanlykhachsan");
            $dongia = $_POST["dongia"];
            $soluong = $_POST["sum"];
            $thanhtien =  date($dongia) * date($soluong);
-//           echo "<tr>";
-//                        echo "<td><label>thành tiền :</label></td>";
-//                        echo "<td><input class='num' type='number' placeholder='0' name='cost' values ='$thanhtien'> VND</td>";
-//                    echo "</tr>";
+           //echo "<tr>";
+                       // echo "<td><label>thành tiền :</label></td>";
+                        //echo "<td><input class='num' type='number' placeholder='0' name='cost' values ='$thanhtien'> VND</td>";
+                    //echo "</tr>";
            if (!is_numeric($thanhtien) ){
                echo "Kiểm tra thông tin";
                exit();
