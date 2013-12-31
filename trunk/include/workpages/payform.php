@@ -57,9 +57,9 @@ mysql_select_db("quanlykhachsan");
             $makh = $row[0];
             $tenkh = $row[1];
             $tenphong = $row[7];
-            $ngayden = $row[13];
-            $ngaydi = $row[14];
-            $gia = $row[17];
+            $ngayden = $row[14];
+            $ngaydi = $row[15];
+            $gia = $row[18];
                 echo "<table>";
                     echo "<tr>";
                         echo "<td><label>Mã Phòng:</label></td>";
@@ -93,16 +93,17 @@ mysql_select_db("quanlykhachsan");
                     echo "<tr>";
                         echo "<td><label>Số Tiền:</label></td>";
                         echo "<td>";
-                            $ngayden = explode("-",$ngayden);
-                            $ngaydi = explode("-",$ngaydi);
-
-                            $ngaydi=mktime(0,0,0,$ngaydi[2],$ngaydi[0],$ngaydi[1]);
+//                            $ngayden = explode($ngayden);
+//                            $ngaydi = explode($ngaydi);
+                            $now = getdate(); 
+                            $currentDate = $now["mday"] . "." . $now["mon"] . "." . $now["year"]; 
+                            //$ngaydi=mktime(0,0,0,$ngaydi[2],$ngaydi[0],$ngaydi[1]);
                             $ngayden=mktime(0,0,0,$ngayden[2],$ngayden[0],$ngayden[1]);
-                            $d=$ngayden - $ngaydi;
+                            $d=$ngayden - $currentDate;
                             $days=abs(floor($d/( 365*24*10)));
-                            
-                        $gia = $gia*$days;
-                            echo "<p>$gia</p>";
+                           
+                            $tien = $gia *$days;
+                            echo "<p>$days</p>";
                         echo "</td>";
                     echo "</tr>";
 //                  
