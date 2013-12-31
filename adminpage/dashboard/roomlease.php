@@ -18,7 +18,7 @@
 			$paged = 1; 
 			if(isset($_GET['paged'])) $paged = $_GET['paged'];
 			$showposts = 6;
-			$begin = ($paged - 1) * $showposts;  
+			$begin = ($paged - 1) * $showposts; 
 			$cnn = DB::StaticConnect();
 			$rs2 = DB::ExecuteQuery("select tp.idthuephong, tp.idphong, p.tenphong, kh.tenkhachhang, tp.cmnd, tp.ngayden, tp.ngaydi from phong as p, thuephong as tp, khachhang as kh where p.idphong=tp.idphong and tp.cmnd=kh.cmnd", $cnn);
 			while($roomlease = mysql_fetch_assoc($rs2)){

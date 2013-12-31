@@ -22,7 +22,7 @@
 		<?php
 			$paged = 1; 
 			if(isset($_GET['paged'])) $paged = $_GET['paged'];
-			$showposts = 8;
+			$showposts = 6;
 			$begin = ($paged - 1) * $showposts; 
 			$cnn = DB::StaticConnect();
 			$rs = DB::ExecuteQuery("select * from quyen limit $begin, $showposts ", $cnn);
