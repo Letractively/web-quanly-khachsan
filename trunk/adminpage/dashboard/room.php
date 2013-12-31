@@ -20,10 +20,12 @@
 		<?php
 			$paged = 1; 
 			if(isset($_GET['paged'])) $paged = $_GET['paged'];
-			$showposts = 8;
-			$begin = ($paged - 1) * $showposts;  
+			$showposts = 6;
+			$begin = ($paged - 1) * $showposts;   
 			$cnn = DB::StaticConnect();
-			$rs = DB::ExecuteQuery("select * from phong", $cnn);
+			$rs = DB::ExecuteQuery("select * from phong limit $begin, $showposts", $cnn);
+			$cnn2 = DB::StaticConnect();
+			$rs2 = DB::ExecuteQuery("select * from phong", $cnn2);
 			while($phong = mysql_fetch_assoc($rs)){
 				?>
 				<tr>
@@ -42,7 +44,7 @@
 		?>
 	</table>
 	<div class="entry">
-		<?php dvd_pagging($paged, ceil(mysql_num_rows($rs)/$showposts), "dashboard.php?type=room&action=all"); ?>
+		<?php dvd_pagging($paged, ceil(mysql_num_rows($rs2)/$showposts), "dashboard.php?type=room&action=all"); ?>
 		<div class="sep"></div>		
 		<a class="add new" href="dashboard.php?type=room&action=addnew">Thêm mới</a>
 	</div>

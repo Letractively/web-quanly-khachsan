@@ -1,3 +1,8 @@
+<?php
+	if(!user_can($idtaikhoan, "manage_role")){
+		header("location:dashboard.php");
+	}
+?>
 <div class="full_w">
 	<div class="h_title">Danh sách vai trò</div>
 	<div class="entry">
@@ -13,10 +18,10 @@
 		<?php
 			$paged = 1; 
 			if(isset($_GET['paged'])) $paged = $_GET['paged'];
-			$showposts = 6;
+			$showposts = 4;
 			$begin = ($paged - 1) * $showposts;  
 			$cnn = DB::StaticConnect();
-			$rs = DB::ExecuteQuery("select * from vaitro", $cnn);
+			$rs = DB::ExecuteQuery("select * from vaitro limit $begin, $showposts", $cnn);
 			$cnn2 = DB::StaticConnect();
 			$rs2 = DB::ExecuteQuery("select * from vaitro", $cnn2);
 			while($role = mysql_fetch_assoc($rs)){

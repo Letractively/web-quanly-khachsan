@@ -20,9 +20,10 @@
 		<?php
 			$paged = 1; 
 			if(isset($_GET['paged'])) $paged = $_GET['paged'];
-			$showposts = 6;
+			$showposts = 5;
 			$begin = ($paged - 1) * $showposts;  
-			
+			$cnn = DB::StaticConnect();
+			$rs = DB::ExecuteQuery("select * from loaiphong limit $begin, $showposts", $cnn);
 			$cnn2 = DB::StaticConnect();
 			$rs2 = DB::ExecuteQuery("select * from loaiphong", $cnn2);
 			while($loaiphong = mysql_fetch_assoc($rs2)){

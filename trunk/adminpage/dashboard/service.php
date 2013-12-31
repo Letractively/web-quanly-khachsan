@@ -23,7 +23,7 @@
 			$showposts = 6;
 			$begin = ($paged - 1) * $showposts;  
 			$cnn = DB::StaticConnect();
-			$rs = DB::ExecuteQuery("select * from dichvu", $cnn);
+				$rs = DB::ExecuteQuery("select * from dichvu limit $begin, $showposts", $cnn);
 			$cnn2 = DB::StaticConnect();
 			$rs2 = DB::ExecuteQuery("select * from dichvu", $cnn2);
 			while($dichvu = mysql_fetch_assoc($rs)){
