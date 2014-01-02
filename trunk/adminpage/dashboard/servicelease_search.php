@@ -27,7 +27,7 @@
 		<?php
 				if(isset($_POST['search'])){
 					$s = $_POST['s'];
-					$cnn2 = DB::StaticConnect();
+					$cnn = DB::StaticConnect();
 					$rs2 = DB::ExecuteQuery("select * from dichvu as dv, thuedichvu as tdv, khachhang as kh where dv.iddichvu=tdv.iddichvu and tdv.cmnd=kh.cmnd and kh.tenkhachhang like '%$s%'", $cnn);
 					while($servicelease = mysql_fetch_assoc($rs2)){
 						?>
