@@ -17,15 +17,15 @@ class DB
         mysql_query("set names 'utf8'");
         return $cnn;
     }
-    static function StaticConnect2()
-    {
-        $mysqli = new mysqli("localhost","root","","quanlykhachsan");
-        $mysqli->set_charset("utf8");
-        if($mysqli->connect_errno){
-            die("Lỗi: ".$mysqli->connect_errno);
-        }
-        return $mysqli;
-    }    
+//    static function StaticConnect2()
+//    {
+//        $mysqli = new mysqli("localhost","root","","quanlykhachsan");
+//        $mysqli->set_charset("utf8");
+//        if($mysqli->connect_errno){
+//            die("Lỗi: ".$mysqli->connect_errno);
+//        }
+//        return $mysqli;
+//    }    
     static function ExecuteQuery($query, $connect)
     {
         $rs = mysql_query($query, $connect) or die('Không thể thực thi truy vấn!');

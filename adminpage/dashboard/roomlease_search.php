@@ -4,12 +4,12 @@
 	}
 ?>
 <div class="full_w">
-	<div class="h_title">Tim kiếm thuê phòng phòng</div>
+	<div class="h_title">Tim kiếm thuê  phòng</div>
 	<div class="entry">
 		<div class="sep">
 			<table>
 			<form action="" method="post">				
-				  <label>TK theo tên phòng:</label><input type="text" name="s" autocomplete="off" /><input class="button" style="margin-left: 50px; height: 30px; border-radius:4px; box-shadow:0 0 0 2pt grey;" type="submit" name="search" value="Tìm Kiếm" id="search"/>
+				  <label>TK tên khách hàng:</label><input type="text" name="s" autocomplete="off" /><input class="button" style="margin-left: 50px; height: 30px; border-radius:4px; box-shadow:0 0 0 2pt grey;" type="submit" name="search" value="Tìm Kiếm" id="search"/>
 			</form>
 			</table>
 		</div>
@@ -28,9 +28,10 @@
 		<?php
 				if(isset($_POST['search'])){
 					$s = $_POST['s'];
-					$cnn2 = DB::StaticConnect();
-					$rs2 = DB::ExecuteQuery("select tp.idthuephong, tp.idphong, p.tenphong, kh.tenkhachhang, tp.cmnd, tp.ngayden, tp.ngaydi from phong as p, thuephong as tp, khachhang as kh where p.idphong=tp.idphong and tp.cmnd=kh.cmnd", $cnn);
-					while($servicelease = mysql_fetch_assoc($rs2)){
+					$cnn = DB::StaticConnect();
+					$rs = DB::ExecuteQuery("select * from phong as p, thuephong as tp, khachhang as kh where p.idphong=tp.idphong and tp.cmnd=kh.cmnd and kh.tenkhachhang like '%$s%'", $cnn);
+                                   
+					while($servicelease = mysql_fetch_assoc($rs)){
 					?>
 					<tr>
 						<td><?php echo $servicelease['idthuephong']; ?></td>
