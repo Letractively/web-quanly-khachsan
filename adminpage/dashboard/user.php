@@ -14,6 +14,7 @@
 				<th scope="col">ID</th>
 				<th scope="col">Tên đăng nhập</th>
 				<th scope="col">Ngày khởi tạo</th>
+				<th scope="col">Vai trò</th>
 				<th scope="col">Ghi chú</th>
 				<th scope="col" style="width: 65px;"></th>
 			</tr>
@@ -27,13 +28,14 @@
 				$cnn = DB::StaticConnect();
 				$rs = DB::ExecuteQuery("select * from taikhoan limit $begin, $showposts", $cnn);
 				$cnn2 = DB::StaticConnect();
-				$rs2 = DB::ExecuteQuery("select * from taikhoan", $cnn2);
+				$rs2= DB::ExecuteQuery("select * from taikhoan", $cnn2);
 				while($row = mysql_fetch_assoc($rs)){
 					?>
 					<tr>
 						<td class="align-center"><?php echo $row['idtaikhoan']; ?></td>
 						<td><?php echo $row['tentk']; ?></td>
 						<td><?php echo date("d/m/Y H:i:s", strtotime($row['ngaytao'])); ?></td>
+						<td><?php echo $row['vaitro'] ?></td>
 						<td><?php echo $row['ghichu'] ?></td>
 						<td>
 							<a href="dashboard.php?type=user&action=update&idtaikhoan=<?php echo $row['idtaikhoan']; ?>" class="table-icon edit" title="Sửa"></a>
