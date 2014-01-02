@@ -1,4 +1,4 @@
-<?php if(!DVD) die("Bạn không có quyền truy cập vào trang này.");  ?>
+﻿<?php if(!DVD) die("Bạn không có quyền truy cập vào trang này.");  ?>
 <form action="" method="post">
   <h1>Đăng Nhập</h1>
   <div class="inset">
@@ -20,8 +20,8 @@
                 $_SESSION['authentication']['vaitro'] = $role['quyen'];
                 
                 if($taikhoan['tinhtrang'] == 0){
-                    echo "Tài khoản của bạn đã bị khóa.";
-						
+                        //header("location: logout.php");
+						echo "<script>alert('Tài khoản đang bị khóa!'); location.href='logout.php';</script>";					
                 }
                 else{
                     header("location: dashboard.php");
